@@ -2,128 +2,171 @@
 Blog
 ====
 
-**Odoo Blog** allows you to create and manage blog posts on your website to engage your audience and
-build a community.
+**Odoo Blog** lets you manage blog pages and posts, and customize them with the website builder.
 
-.. tip::
-   If the Blog module is not yet installed, click :guilabel:`+New` on the website builder, select
-   :guilabel:`Blog Post`, and click :guilabel:`Install`.
+Install the module :guilabel:`Blog` by clicking :guilabel:`New` on the website builder, click
+:guilabel:`Blog Post` and :guilabel:`Install`.
 
-Creating a blog
-===============
+.. seealso::
+   `Odoo Tutorials: Blogs [video] <https://www.odoo.com/slides/slide/blogs-6935>`_
 
-To create or edit a blog, go to :menuselection:`Website --> Configuration --> Blogs: Blogs`. Click
-:guilabel:`New`, and enter the :guilabel:`Blog Name` and the :guilabel:`Blog Subtitle`.
+Blog posts
+==========
 
-The :guilabel:`Blog` menu item is added to your website's menu the first time you create a blog and
-gathers all your blogs.
+After applying the desired changes, click :guilabel:`Save`
+To create a blog post, click :guilabel:`New` on the website builder and click :guilabel:`Blog Post`.
+Select a :ref:`blog <blog/blog pages>`, define a :guilabel:`Blog Post Title` and click
+:guilabel:`Save`. Write the post's content and customize it using the website builder.
 
-Adding a blog post
-==================
+To publish a post, toggle the :guilabel:`Unpublished` switch in the top-right corner of the page.
 
-Go to your website, click :guilabel:`+New` in the top-right corner, and select
-:guilabel:`Blog Post`. In the pop-up, **select the blog** where the post should appear, write the
-post's :guilabel:`Title`, and :guilabel:`Save`. You can then write the post's content and customize
-the page using the website builder.
+To delete a blog post, go to :menuselection:`Website -> Site -> Blog post`. Select the blog
+post to delete, click :guilabel:`Action` and :guilabel:`Delete`.
+
+Customize blog posts
+--------------------
+
+To customize the layout of all blog posts, open one and click :menuselection:`Edit --> Style`.
+Different options can be used to customize the posts:
+
+- :guilabel:`Layout`: display the title inside or above the cover.
+- :guilabel:`Increase Readability`: Enlarge or not the blog posts' size for better reading comfort.
+- :guilabel:`Sidebar`: display archives, authors, blogs list, social networks, next article and
+  comments:
+
+  - :guilabel:`Archive`: allow visitors to view all posts from a specific month by selecting it.
+  - :guilabel:`Author`: display the post author.
+  - :guilabel:`Blog List`: display links to all the blogs.
+  - :guilabel:`Share Links`: add clickable icons that link to your social network profiles and a
+    subscription field for your newsletter.
+
+- :guilabel:`Breadcrumb`: display the breadcrumb trail.
+- :guilabel:`Bottom`: click the :guilabel:`Next Article` to hide or display the next post at the
+  end of the page, and click :guilabel:`Comments` to enable or disable visitors' comments.
+
+To add tags or customize the cover of a specific post, click the cover and use the following
+settings under the :guilabel:`Blog Post Cover` section:
+
+- :guilabel:`Tags`:display or hide existing :ref:`tags <blog/tags>`.
+- :guilabel:`Background`: add an image by clicking the :icon:`os-camera` :guilabel:`(camera)` icon,
+  or remove the image by clicking the :guilabel:`No entry` icon and, if desired, add a
+  :ref:`theme color <website/themes/colors>`.
+- :guilabel:`Size`: select the size of the cover (:guilabel:`Full screen`, :guilabel:`Half screen`,
+  or :guilabel:`Fit text`).
+- :guilabel:`Filter Intensity`: choose the intensity of the cover's color.
+  (:guilabel:`Low`, :guilabel:`Medium`, :guilabel:`High`) or disable it by selecting
+  :guilabel:`No filter`.
+
+After applying the desired changes, click :guilabel:`Save`.
 
 .. tip::
    - Illustrate your articles with copyright-free images from :doc:`Unsplash
      </applications/general/integrations/unsplash>`.
-   - Type `/` in the text editor to format and add elements to your text.
+   - Use :ref:`Plausible <analytics/plausible>` to keep track of the traffic on your blog.
+   - Customize blog building blocks through the website editor. For exemple, filter by the
+     :guilabel:`Latest blog posts` or :guilabel:`Most viewed blog posts` and determine which blog
+     to display in the building block.
 
-.. important::
-   Don't forget to toggle the :guilabel:`Unpublished` switch in the top-right corner to publish
-   your post.
+.. seealso::
+   - :doc:`Building block documentation <../../../applications/websites/website/web_design/building_blocks>`
+   - :ref:`Powerbox <Powerbox>`
+   - :ref:`Text editor toolbar<essentials/html_editor/toolbar>`
 
-Using tags
-==========
+.. _blog/tags:
 
-Tags let visitors filter all posts sharing the same tag. By default, they are displayed at the
-bottom of posts, but can also be displayed on the blog's main page. To do so, click
-:menuselection:`Edit --> Customize` and enable the :guilabel:`Sidebar`. By default, the sidebar's
-:guilabel:`Tags List` is enabled.
+Tags
+~~~~
 
-To create a tag, go to :menuselection:`Website --> Configuration --> Blogs: Tags` and click
+Tags let visitors filter blog posts that share a specific tag. They are displayed at the bottom of
+each post.
+
+To create a tag, go to :menuselection:`Website --> Configuration --> Tags` and click
 :guilabel:`New`. Fill in the:
 
-- :guilabel:`Name`
-- :guilabel:`Category`: tag categories let you group tags displayed on the sidebar by theme.
-- :guilabel:`Used in`: to apply the tag to existing blog posts, click :guilabel:`Add a line`,
+- :guilabel:`Name`.
+- :ref:`Category <blog/tag category>`.
+- :guilabel:`Color`.
+- :guilabel:`Used in`: to apply tags to existing blog posts, click :guilabel:`Add a line`,
   select the posts, and click :guilabel:`Select`.
 
-You can add and create tags directly from posts by clicking :menuselection:`Edit --> Customize` and
+Add and create tags directly from posts by clicking :menuselection:`Edit --> Style` and
 select the post's cover. Under :guilabel:`Tags`, click :guilabel:`Choose a record...`, and select
-or create a tag.
+or create a tag by writing a new name.
 
-.. image:: blog/create-tag.png
-   :alt: Adding a tag to a blog post
+.. _blog/tag category:
 
-.. note::
-   To manage tag categories, go to :menuselection:`Website --> Configuration --> Blogs: Tag
-   Categories`.
+Tag category
+************
 
-Customizing blog homepages
-==========================
+Tag categories let you organize tags displayed on the sidebar into groups.
 
-Customize the content of blog homepages by opening a blog homepage and clicking :menuselection:`Edit
---> Customize`.
+.. image:: blog/tag-categories.png
+    :alt: tag categories
 
-.. note::
-   Settings apply to **all** blogs homepages.
+To create tag categories, go to :menuselection:`Website --> Configuration --> Tag Categories`
+and click :guilabel:`New`.
 
-:guilabel:`Top Banner`: :guilabel:`Name/Latest Post` displays the title of the latest post on the
-top banner, while :guilabel:`Drop Zone for Building Blocks` removes the top banner and lets you use
-any building block instead.
+.. _blog/blog pages:
 
-:guilabel:`Layout`: organizes posts as a :guilabel:`Grid` or :guilabel:`List`.
+Blog landing pages
+==================
 
-- :guilabel:`Cards`: adds a *card* effect.
-- :guilabel:`Increase Readability`: improves the text's readability.
+To create multiple blogs, go to :menuselection:`Website --> Configuration --> Blogs`. Click
+:guilabel:`New`. Next, enter the :guilabel:`Blog Name` and the :guilabel:`Blog Subtitle`.
 
-:guilabel:`Sidebar`: displays a sidebar containing an :guilabel:`About us` section.
-
-- :guilabel:`Archives`: allows visitors to select a month and filter all posts created during that
-  month.
-- :guilabel:`Follow Us`: displays links to your social media networks. They can be configured using
-  the Social Media building block somewhere on your website.
-- :guilabel:`Tags List`: displays all tags related to a blog. Visitors can select a tag to filter
-  all related posts.
-
-:guilabel:`Posts List`: :guilabel:`Cover` displays the posts' images, and :guilabel:`No Cover` hides
-them.
-
-- :guilabel:`Author`: displays the posts' authors.
-- :guilabel:`Comments/Views Stats`: displays the posts' number of comments and views.
-- :guilabel:`Teaser & Tags`: displays the posts' first sentences and tags.
-
-Customizing blog posts
-======================
-
-Customize posts by opening a blog post and clicking :menuselection:`Edit --> Customize`.
+The :guilabel:`Blog` menu gathers all the blogs and their posts.
 
 .. note::
-   Settings apply to **all** posts.
+   With two or more blogs, the blog landing page (/blog) aggregates posts from all blogs and lets
+   visitors choose which blog to view.
 
-:guilabel:`Layout`: :guilabel:`Title Inside Cover` displays the title inside the cover image, and
-:guilabel:`Title above Cover` displays it above.
+Customize blog landing pages
+----------------------------
 
-- :guilabel:`Increase Readability`: increases the text's readability.
+To customize the blog landing page(s), go to :menuselection:`Edit --> Style` and use the available
+options as desired.
 
-:guilabel:`Sidebar`: displays the :guilabel:`Sidebar` and additional options:
+.. note::
+   If you use multiple blogs, settings configured on the main blog landing page or on a specific
+   blog landing page will be applied to all other pages.
 
-- :guilabel:`Archive`: allows visitors to select a month and filter all posts created during that
-  month.
-- :guilabel:`Author`: displays the post's author and creation date.
-- :guilabel:`Blog List`: displays links to all your blogs.
-- :guilabel:`Share Links`: displays share buttons to several social networks.
-- :guilabel:`Tags`: displays the post's tags.
+- :guilabel:`Top Banner`: display or hide the page's banner:
 
-:guilabel:`Breadcrumb`: displays the path to the post.
+  - :guilabel:`Full-width`: make the banner use the page's full-width or display a condensed banner.
+- :guilabel:`Layout`: display blog posts as grid or as list.
+- :guilabel:`Cards`: display blog posts with or without the *card* effect.
+- :guilabel:`Increase Readability`: enlarge or not the blog posts' size for better reading comfort .
+- :guilabel:`Sidebar`: display or hide a sidebar that contains an *about us* section, depending
+  on the options selected:
 
-:guilabel:`Bottom`: :guilabel:`Next Article` displays the next post at the bottom, and
-:guilabel:`Comments` enable visitors to comment on the post.
+  - :guilabel:`Archives`: allow visitors to view all posts from a specific month by selecting it.
+  - :guilabel:`Follow Us`: add clickable icons that link to your social network profiles and a
+    subscription field for your newsletter.
+  - :ref:`Tags List <blog/tags>`: allow visitors to view all blog posts that share a specific tag by
+    selecting it.
 
-:guilabel:`Select To Tweet`: visitors are offered to tweet the text they select.
+- :guilabel:`Posts List`: select :guilabel:`Cover` to display the posts' covers or select
+  :guilabel:`No Cover` to hide them.
+- :guilabel:`Author`: display the posts' authors.
+- :guilabel:`Comments/Views Stats`: display or hide the posts' number of comments and views.
+- :guilabel:`Teaser & Tags`: display the posts' first sentences and tags.
+
+After applying the desired changes, click :guilabel:`Save`
 
 .. tip::
-   Use :ref:`Plausible <analytics/plausible>` to keep track of the traffic on your blog.
+   - Select the :guilabel:`Follow us` block in edit mode to toggle off the social networks that
+     should not be displayed, and enter the URLs to your social network profiles where necessary.
+   - To change the post cover's background, click the blog post and edit the :guilabel:`Background`
+     field in the :guilabel:`Cover` section.
+
+.. Note::
+   Increase blogs' visibility in search engines, attract more visitors and more clicks while
+   improving the :doc:`SEO <../../../applications/websites/website/structure/seo>` by:
+
+   - Updating the content of the website regularly.
+   - Using meta tags and ensure both the website content and its metadata are translated.
+   - Never having more than one :ref:`Heading 1 <website/elements/titles>` per page so the
+     :doc:`SEO <../../../applications/websites/website/structure/seo>` can easily identify the
+     main topic of the page.
+   - Use the :guilabel:`Blog` :ref:`building blocks <website/building_blocks/add>` anywhere on the
+     website.

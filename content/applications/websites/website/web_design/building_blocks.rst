@@ -215,6 +215,8 @@ allow you to customize the shape.
      .. image:: building_blocks/change-block-position.png
         :alt: Change block position
 
+
+
    - To resize a block, click and drag the dots around its edges to adjust it as needed.
 
      .. image:: building_blocks/adapt-block-size.png

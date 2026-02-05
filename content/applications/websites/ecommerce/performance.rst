@@ -2,37 +2,39 @@
 Performance management
 ======================
 
-Odoo integrates a variety of tools to analyze and improve the performance of your e-commerce
-website.
+Odoo provides robust tools to :ref:`monitor and analyze <ecommerce/performance/data-monitoring>`
+your e-commerce's performance and :ref:`optimize <ecommerce/performance/email_queue>` the processing
+of order confirmation emails during high-traffic periods.
+
+.. seealso::
+   - :ref:`analytics/plausible`
+   - :ref:`analytics/google-analytics`
+   - :doc:`../website/structure/seo`
+
+.. _ecommerce/performance/data-monitoring:
 
 Data monitoring
 ===============
 
-**Website** allows monitoring and analysis of the sales performance of your e-commerce. To access
-the **reporting view**, go to :menuselection:`Website --> Reporting --> eCommerce`. This dashboard
-helps you monitor everything related to sales, such as sales performance per product, category, day,
-etc.
+The eCommerce reporting view allows you to monitor and analyze the performance of your online sales.
+To access it, go to :menuselection:`Website --> Reporting --> eCommerce`. The :guilabel:`eCommerce
+Dashboard` helps monitor everything related to the online shop, e.g., sales performance by product
+or category. By default, the graph shows data for :guilabel:`Confirmed Orders` and the current
+month.
 
-.. image:: performance/reporting.png
-   :align: center
-   :alt: Performance reporting of e-commerce
+Click the :guilabel:`Measures` :icon:`fa-caret-down` button to select the metric to analyze, such as
+:guilabel:`Discount %`, :guilabel:`Qty Invoiced`, :guilabel:`Untaxed Total` (default), or
+:guilabel:`Volume`. You can also switch between :ref:`pivot <studio/views/reporting/pivot>` and
+:ref:`graph <studio/views/reporting/graph>` views, and create a spreadsheet by clicking
+:guilabel:`Insert in Spreadsheet`.
 
-By clicking :guilabel:`Measures`, you can select the type of measurement used, such as:
+.. image:: performance/ecommerce-report.png
+   :alt: Example of the e-commerce report view.
 
-- :guilabel:`Margin`;
-- :guilabel:`Qty Invoiced`;
-- :guilabel:`Untaxed Total`;
-- :guilabel:`Volume`;
-- ...
-
-Other options include **multiple views (Pivot, etc.), comparison** by periods or years, and directly
-:guilabel:`insert in spreadsheet`, etc.
-
-Analytics
-=========
-
-It is possible to link your Odoo website with :ref:`analytics/plausible` and
-:ref:`analytics/google-analytics`.
+.. seealso::
+   - :doc:`/applications/productivity/dashboards`
+   - :doc:`/applications/essentials/search`
+   - :doc:`/applications/essentials/reporting`
 
 .. _ecommerce/performance/email_queue:
 
@@ -49,13 +51,14 @@ which sends queued emails as soon as possible.
 
 To enable asynchronous email sending:
 
-#. Enable the :doc:`developer mode </applications/general/developer_mode>`.
-#. Go to :menuselection:`Settings --> Technical --> System Parameters` and set the
-   :guilabel:`sale.async_emails` system parameter to `True`.
-#. Go to :menuselection:`Settings --> Technical --> Scheduled Actions` and ensure that the
-   :guilabel:`Sales: Send pending emails` scheduled action is enabled.
+#. Enable the :ref:`developer-mode`.
+#. Open the Settings app and go to :menuselection:`Settings --> Technical --> System Parameters`.
+#. Search for the :guilabel:`sale.async_emails` system parameter, set its :guilabel:`Value` to
+   `True`, and click :guilabel:`Save`.
+#. Navigate to :menuselection:`Settings --> Technical --> Scheduled Actions`.
+#. Select the :guilabel:`Sales: Send pending emails` scheduled action.
+#. Ensure the :guilabel:`Active` switch is enabled.
 
 .. caution::
-   Enabling this feature may delay order confirmation and invoice emails by a few minutes. It is
-   recommended only for high-traffic websites, as it can introduce unnecessary delays for e-commerce
-   websites with moderate traffic.
+   This configuration is recommended only for high-traffic websites, as it may introduce unnecessary
+   delays for order confirmation and invoice emails on websites with moderate traffic.

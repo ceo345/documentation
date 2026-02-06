@@ -51,6 +51,7 @@ applications/productivity/sign/united_arab_emirates.rst applications/productivit
 applications/productivity/sign/united_kingdom.rst applications/productivity/sign/validity/united_kingdom.rst
 applications/productivity/sign/uzbekistan.rst applications/productivity/sign/validity/uzbekistan.rst
 applications/productivity/sign/vietnam.rst applications/productivity/sign/validity/vietnam.rst
+applications/productivity/ai/webpage.rst applications/websites/website/structure/pages.rst
 
 # applications/websites
 

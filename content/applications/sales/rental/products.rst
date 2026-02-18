@@ -188,36 +188,12 @@ click :guilabel:`Request Signature`.
 .. image:: products/request-signature.png
    :alt: The Request Signature option in the Odoo Rental application.
 
-A :guilabel:`Sign Documents` pop-up window displays. Select the desired document from the
-:guilabel:`Template` drop-down menu.
+A :guilabel:`Sign Documents` pop-up window displays. Either :ref:`select an existing document
+template <sign/templates/use-odoo-record>`  or :ref:`create a new one
+<sign/request-signatures/one-off-record>`.
 
-.. image:: products/sign-documents-popup.png
-   :alt: The Sign Documents pop-up window that appears in the Odoo Rental application.
-
-Doing so reveals a :guilabel:`New Signature Request` pop-up window. Upon confirming the information
-in the :guilabel:`New Signature Request` pop-up form, click :guilabel:`Send` to initiate the signing
-process.
-
-.. image:: products/new-signature-request-form.png
-   :alt: The New Signature Request pop-up window that appears in the Odoo Rental application.
-
-A link to the signature request will appear in the record's chatter. The document is accessible to
-the customer via the customer portal or email.
-
-When the customer clicks :guilabel:`Sign document`, a separate page is then revealed, showcasing the
-document to be signed. The customer begins the process by clicking :guilabel:`Click to start`. The
-app guides the signee to the required signature locations and allows them to create electronic
-signatures to complete the form.
-
-.. image:: products/adopt-signature-popup.png
-   :alt: The adopt your signature pop-up window that appears in the Odoo Rental application.
-
-Once the document has been signed and completed, click :guilabel:`Validate & Send Completed
-Document` at the bottom of the document. Odoo presents the option to download the signed document
-for record-keeping purposes, if necessary.
-
-.. image:: products/validate-send-doc-button.png
-   :alt: The validate and send completed document button in the Odoo Rental application.
+After to send the request, a link to the signature request will appear in the record's chatter. The
+document is accessible to the customer via the customer portal or email.
 
 .. seealso::
    `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_

@@ -191,67 +191,30 @@ email the quotation to the customer. When the customer approves the quotation, c
 Customer signature
 ==================
 
-Odoo enables electronic signature requests for customer service agreements and any other documents
-that require signatures. Service agreements detail the business relationship and mutual duties.
-These agreements protect both the provider and the customer by creating clear, enforceable
-guidelines.
-
-If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
-dashboard, select the desired rental order. Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
-click :guilabel:`Request Signature`.
-
-.. image:: service_products/request-signature.png
-   :alt: The Action drop-down menu for requesting a signature in the Rental app.
-
-A :guilabel:`New Signature Request` pop-up window displays. Select the desired document from the
-:guilabel:`Template` drop-down menu.
-
-.. image:: service_products/new-signature-request.png
-   :alt: Sample of the New Signature Request pop-up window in the Rental app.
-
-Doing so reveals a :guilabel:`New Signature Request` pop-up window. Upon confirming the information
-in the :guilabel:`New Signature Request` pop-up form, click :guilabel:`Send` to initiate the signing
-process.
-
-.. image:: service_products/new-signature-request-message.png
-   :alt: Sample of the New Signature Request message in the Rental app.
-
-A link to the signature request will appear in the chatter of the rental order. The document is
-accessible to the customer via the customer portal or email.
+Odoo has the ability to request the customer sign a rental agreement, outlining the arrangement
+between the company and customer, *before* they pick up the rental products. Such documents can
+ensure everything is returned on-time and in its original condition.
 
 .. note::
-   Requesting an electronic signature can be done at any stage of the order. This feature requires
-   the **Sign** app. Typically, rental or service agreements are signed **after the rental order is
-   confirmed** to establish the responsibilities and terms for the parties involved.
+   Requesting a signature can be done during any stage of the order. This feature also requires the
+   :doc:`Sign <../../productivity/sign>` app.
 
-.. important::
-   The :guilabel:`Request Signature` feature only allows the customer to sign the document through
-   their email or customer portal. The customer cannot sign the document through the user's **Sign**
-   app.
+If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
+dashboard, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
+click :guilabel:`Request Signature`.
 
-Signing a document from an email link
--------------------------------------
+.. image:: products/request-signature.png
+   :alt: The Request Signature option in the Odoo Rental application.
 
-When a customer clicks :guilabel:`Sign document`, a separate page is then revealed, showcasing the
-document to be signed. The customer begins the process by clicking :guilabel:`Click` to start.
+A :guilabel:`Sign Documents` pop-up window displays. Either :ref:`select an existing document
+template <sign/templates/use-odoo-record>`  or :ref:`create a new one
+<sign/request-signatures/one-off-record>`.
 
-The app guides the signer to the required signature locations and allows them to create electronic
-signatures to complete the form.
-
-.. image:: service_products/adopt-signature-popup.png
-   :alt: Sample of a customer signature with the Auto option chosen.
-
-The *Adopt your signature* pop-up window that appears in the Odoo Rental application. Once the
-document has been signed and completed, click :guilabel:`Validate & Send Completed Document` at the
-bottom of the document.
-
-Odoo presents the option to download the signed document for record-keeping purposes, if necessary.
-
-.. image:: service_products/validate-send-doc-button.png
-   :alt: Sample of a signed document with the Validate & Send Completed Document button.
+After to send the request, a link to the signature request will appear in the record's chatter. The
+document is accessible to the customer via the customer portal or email.
 
 .. seealso::
-   `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_.
+   `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
 
 Entering time for the rental order
 ==================================

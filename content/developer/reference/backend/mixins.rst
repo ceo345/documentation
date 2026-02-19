@@ -262,9 +262,9 @@ Subtypes are created as data in your module; the model has the following fields:
 
 Interfacing subtypes with field tracking allows to subscribe to different kind
 of notifications depending on what might interest users. To do this, you
-can override the ``_track_subtype()`` function:
+can override the ``_track_log_get_default_subtype()`` function:
 
-.. method:: _track_subtype(init_values)
+.. method:: _track_log_get_default_subtype(track_init_values)
 
     Give the subtype triggered by the changes on the record according
     to values that have been updated.
@@ -291,10 +291,11 @@ can override the ``_track_subtype()`` function:
         </record>
 
 
-    Then, we need to override the ``track_subtype()`` function. This function
-    is called by the tracking system to know which subtype should be used depending
-    on the change currently being applied. In our case, we want to use our shiny new
-    subtype when the ``state`` field changes from *draft* to *confirmed*:
+    Then, we need to override the ``_track_log_get_default_subtype()`` function.
+    This function is called by the tracking system to know which subtype should
+    be used depending on the change currently being applied. In our case, we want
+    to use our shiny new subtype when the ``state`` field changes from *draft*
+    to *confirmed*:
 
     .. code-block:: python
 
@@ -310,7 +311,7 @@ can override the ``_track_subtype()`` function:
             state = fields.Selection([('draft', 'New'), ('confirmed', 'Confirmed')],
                                      tracking=True)
 
-            def _track_subtype(self, init_values):
+            def _track_log_get_default_subtype(self, track_init_values):
                 # init_values contains the modified fields' values before the changes
                 #
                 # the applied values can be accessed on the record as they are already
@@ -318,7 +319,7 @@ can override the ``_track_subtype()`` function:
                 self.ensure_one()
                 if 'state' in init_values and self.state == 'confirmed':
                     return self.env.ref('my_module.mt_state_change')
-                return super(BusinessTrip, self)._track_subtype(init_values)
+                return super()._track_log_get_default_subtype(track_init_values)
 
 Customizing notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -2,208 +2,165 @@
 Create events
 =============
 
-With the *Events* application, event organizers can create and configure in-person or online-only
-events in Odoo. Each new event contains a number of customizable options that are geared around
-specific event logistics, as needed per event, such as ticket sales and registration desk, booths,
-tracks, sponsors, rooms, and more.
+With the **Events** application, event organizers can create and configure in-person or online
+events in Odoo. Each new event contains a number of options to customize specific logistics for
+events, such as ticket sales, registration desk, booths, tracks, sponsors, rooms, and more.
 
-Events can be manually created from scratch or built off of pre-made templates. Once launched, the
-*Events* application then integrates with the *Website* app for the front-end promotion and
-registration of the event for attendees, the *Sales* app for the purchasing ability of paid tickets,
-as well the *CRM* application through customizable lead generation rules.
+Events can be manually created from scratch or built from preconfigured templates. Once launched,
+the **Events** app integrates with other apps for enhanced functionalities, including promoting
+events, selling registration tickets to attendees, and generating leads using customizable rules.
 
 .. _events/new-event:
 
-New event
+Dashboard
 =========
 
-To create a new event, begin by navigating to the :menuselection:`Events app` to land on the default
-:guilabel:`Events` dashboard, in the :icon:`oi-view-kanban` :guilabel:`Kanban` view. From there, or
-alternatively from the :icon:`oi-view-list` :guilabel:`List` or :icon:`fa-tasks` :guilabel:`Gantt`
-views, click the :guilabel:`New` button in the upper-left corner of the dashboard to open up a new
-event form.
+To create an event, navigate to the :guilabel:`Events app` to land on the dashboard. By default, the
+:guilabel:`Events` dashboard uses the :icon:`oi-view-kanban` :guilabel:`Kanban` view, which
+showcases all events in the database in their respective pipeline stages. Other views can be set
+using the buttons in the upper-right corner.
 
-.. image:: create_events/blank-event-template.png
-   :align: center
-   :alt: Typical event template in the Odoo Events application.
+Each event card displays the name of the event, its scheduled date, location, number of expected
+:guilabel:`Attendees`, any scheduled activities related to the event, and the responsible event
+manager.
+
+The cards can be dragged-and-dropped into any stage in the pipeline.
+
+.. image:: kanban-dashboard.png
+   :alt: Overview of Events dashboard with the Kanban view in Odoo Events.
+
+The default stages in the :guilabel:`Kanban` view are :guilabel:`New`, :guilabel:`Booked`,
+:guilabel:`Announced`, :guilabel:`Ended`, and :guilabel:`Cancelled`.
 
 .. note::
-   If certain fields do not readily appear on the event form, that means an additional application
-   needs to be installed, or the database is not operating in a multi-company environment.
+   The :guilabel:`Ended` and :guilabel:`Cancelled` stages are folded by default and located to the
+   right of the other stages.
 
-   For example, the :guilabel:`Twitter Wall` field **only** appears if the *Social Marketing* app is
-   installed, and the :guilabel:`Company` field **only** appears if the database is working in a
-   multi-company environment.
+To add a new stage, click the :icon:`fa-plus` :guilabel:`Add Stage` button on the right, enter a
+name for the stage, then click :guilabel:`Add`.
 
-   These are just *additional* elements that can be used for an event. They are **not** required to
-   create, host, and manage an event with Odoo *Events*.
+Add a new event
+===============
 
-Event form
-==========
+To create a new event from the default dashboard view, the :icon:`oi-view-list` :guilabel:`List`, or
+the :icon:`fa-tasks` :guilabel:`Gantt` view, click the :guilabel:`New` button in the upper-left
+corner of the dashboard to open up a new event form.
 
-At the top of the event form are a series of smart buttons related to various event metrics, which
-will autopopulate with pertinent data once attendees begin to register, booths and sponsors sign on
-for the event, the event takes place, and so on.
+.. image:: create_events/event-form.png
+   :alt: Typical event template in the Odoo Events application.
 
-Primarily, these smart buttons are used as logistical portals to perform specific actions for the
-event. The numeric displays are primarily for quick reference points.
+At the top of the event form are a series of smart buttons related to various event metrics. These
+auto-populate with data once attendees begin to register, when booths and sponsors sign on for the
+event, when the event takes place, and so on. These smart buttons can be clicked to navigate to the
+event's related pages to modify any details and/or perform any desired actions.
 
-While those visual metrics are useful, they can still be clicked, and used to navigate to
-specific event-related pages to modify and/or perform any desired actions.
+Beneath the smart buttons is the event form, which contains various fields and clickable tabs to
+configure the necessary details of the event.
 
-Beneath the smart buttons is the event form, which contains various fields and clickable tabs that
-serve to configure the initial, necessary details of the event.
+To start, enter some basic information about the event in the following fields:
 
-The following are fields found on an event form:
+- :guilabel:`Event Name`: The title of the event. This field is **required**.
+- :guilabel:`Date`: The scheduled date or date range of the event (expressed in the local timezone).
+  This field is auto-populated but modifiable and is **required**.
+- :guilabel:`Display Timezone`: The timezone in which the event date is displayed on the website.
+  This field is auto-populated but modifiable and is **required**.
+- :guilabel:`Language`: The chosen language for all event communications.
 
-- :guilabel:`Event Name`: the title of the event. This field is **required**.
+.. note::
+   To the right of the entered :guilabel:`Event Name`, there is a language tooltip, represented by
+   an abbreviated language indicator (e.g., `EN`). When clicked, a :guilabel:`Translate name`
+   pop-up window appears, displaying various preconfigured language translation options available in
+   the database.
 
-  .. note::
-     To the right of the entered :guilabel:`Event Name`, there is a language tooltip, represented by
-     an abbreviated language indicator (e.g. `EN`). When clicked, a :guilabel:`Translate: name`
-     pop-up window appears, displaying various pre-configured language translation options available
-     in the database.
+Optionally, to populate the event form from an event template, select an option in the
+:guilabel:`Template` drop-down menu. To learn more, see the :doc:`event_templates` documentation.
 
-- :guilabel:`Date`: when the event is scheduled to take place (expressed in your local timezone).
-  This field is auto-populated, but modifiable, and is **required**.
-- :guilabel:`Display Timezone`: the timezone in which the event dates/times will be displayed on the
-  website. This field is auto-populated, but modifiable, and is **required**.
-- :guilabel:`Language`: designate a specific language for all event communications to be translated
-  into, if necessary. This field is blank, by default, so if event-related communications are being
-  sent to recipients who speak a different language, be sure to configure this field properly.
-- :guilabel:`Twitter Wall`: creates a separate page on the event website to feature specific social
-  posts on X (formerly Twitter) that contain pre-determined desired elements.
+Additionally, add any corresponding tags (e.g., `Online`, `Conference`) for the event in the
+:guilabel:`Tags` field. Multiple tags can be added per event.
 
-  .. tip::
-     To create and customize a :guilabel:`Twitter Wall`, type the name of the desired wall into the
-     field, and select :guilabel:`Create and edit...` from the resulting drop-down menu.
+.. tip::
+   Tags can be displayed on events that are listed on the website by enabling the :guilabel:`Show on
+   Website` checkbox from :menuselection:`Events app --> Configuration --> Event Tag Categories`.
 
-     Doing so reveals :guilabel:`Create Twitter Wall` pop-up window.
+Continue by entering information such as points of contact and venue location in the following
+fields:
 
-     .. image:: create_events/twitter-wall-popup.png
-        :align: center
-        :alt: The Twitter Wall pop-up window in the Odoo Events application.
+- :guilabel:`Organizer`: The organizer of the event (a company, contact, or employee).
+- :guilabel:`Responsible`: The specific user responsible for managing the event in the database.
+- :guilabel:`Company`: The specific company in the database to which the event is related. This
+  field **only** appears if working in a multi-company environment. This field is auto-populated but
+  modifiable. It is **required**.
+- :guilabel:`Website`: The specific website in the database on which the event is published. If this
+  field is left blank, the event can be published on **all** websites in the database. To learn
+  more, refer to the :doc:`Multiple websites <../../websites/website/configuration/multi_website>`
+  documentation.
+- :guilabel:`Venue`: The event venue location. This field pulls information from the **Contacts**
+  application. Alternatively, the information can be entered manually.
+- :guilabel:`Exhibition Map`: The image of the event venue map. Click the :guilabel:`Upload your
+  file` button to upload an image of the event venue map.
 
-     From this window, enter a :guilabel:`Wall Name`. Then, select a certain word or hashtag for
-     Odoo to search for on X, like `#WoodWorkingExpo24`, for example.
+To limit the number of registrations for the event, check the :guilabel:`Limit Registrations` and
+enter the maximum number of attendees allowed in the resulting field.
 
-     Next, determine the :guilabel:`Type of tweets` Odoo should showcase with that predetermined
-     criteria. The choices in this field are: :guilabel:`Recent`, :guilabel:`Popular`, or
-     :guilabel:`Mixed`.
+Optionally, to create event badges for attendees, fill in the following fields:
 
-     Users also have the option to add a brief :guilabel:`Description` to the wall, as well.
+- :guilabel:`Badge Dimension`: The desired paper format dimension for the badges. The options are
+  :guilabel:`A4 foldable`, :guilabel:`A6`, or :guilabel:`4 per sheet`.
+- :guilabel:`Badge Background`: The custom background image for the badges. Click the
+  :guilabel:`Upload your file` button to upload an image.
 
-     Lastly, the greyed-out, non-modifiable :guilabel:`Website URL` field will autopopulate with the
-     full URL needed to access the document through the event website.
+Additional event configurations
+===============================
 
-     An image can also be added to the wall by clicking the :icon:`fa-pencil` :guilabel:`(pencil)`
-     icon that appears when the cursor hovers over the :guilabel:`(camera)` placeholder image in the
-     upper-right corner of the pop-up window.
-
-     Then, from the resulting file explorer window, select the desired image to be added to the
-     wall.
-
-     This :guilabel:`Twitter Wall` field **only** appears on the event form if the *Social
-     Marketing* app is installed, and an X account has been added as a stream on the application. To
-     learn more, check out the :doc:`Social Marketing <../social_marketing>` documentation.
-
-- :guilabel:`Template`: choose a pre-configured event template from the resulting drop-down menu.
-
-  Or, create a new one directly from this field, by typing in the name of the new template, and
-  selecting either:
-
-  - :guilabel:`Create` (which creates the template, and can be edited later) or
-  - :guilabel:`Create and edit...` (which creates the template, and reveals a separate template page
-    to configure the template in greater detail).
-
-- :guilabel:`Tags`: add any corresponding tags to briefly describe the event (e.g. `Online`,
-  `Conference`, etc.). Multiple tags can be added per event.
-
-  .. tip::
-     Tags can be displayed on events that are listed on the website by enabling the *Show on
-     Website* checkbox from :menuselection:`Events app --> Configuration --> Event Tag Categories`.
-
-- :guilabel:`Organizer`: designate the organizer of the event (a company, contact, or employee).
-- :guilabel:`Responsible`: designate a user in the database to be responsible for this event.
-- :guilabel:`Company`: designate which company in the database to which this event is related. This
-  field **only** appears if working in a multi-company environment. This field is auto-populated,
-  but modifiable, and is **required**.
-- :guilabel:`Website`: choose to restrict the publishing of this event to a specific website created
-  in Odoo. If this field is left blank, the event can be published on *all* websites in the
-  database. To learn more, refer to the :doc:`Multiple websites
-  <../../websites/website/configuration/multi_website>` documentation.
-- :guilabel:`Venue`: enter event venue details. This field pulls pertinent information from the
-  *Contacts* application. Alternatively, :guilabel:`Venue` information can be manually added in this
-  field, as well. At the very least, there **must** be a venue name, address, city, zip code/region,
-  and country entered.
-- :guilabel:`Exhibition Map`: if desired, click the :guilabel:`Upload your file` button to upload an
-  image of the event venue map.
-- :guilabel:`Limit Registrations`: if this checkbox is ticked, a limit to the amount of
-  registrations is added to the event, and that desired limit amount **must** be entered in the
-  blank field before :guilabel:`Attendees`.
-- :guilabel:`Badge Dimension`: select a desired paper format dimension for event badges. The options
-  are: :guilabel:`A4 foldable`, :guilabel:`A6`, or :guilabel:`4 per sheet`.
-- :guilabel:`Badge Background`: if desired, click the :guilabel:`Upload your file` button to upload
-  a custom background image for event badges.
-
-When the above fields in the event form have been adequately filled in, move on to the four tabs at
-the bottom of the event form for further customization.
-
-Those tabs are: :ref:`Tickets <events/event-tickets>`, :ref:`Communication
-<events/event-communication>`, :ref:`Questions <events/event-questions>`, and :ref:`Notes
-<events/event-notes>`.
+After filling out the fields on the event form, move on to the four tabs at the bottom for further
+customization.
 
 .. _events/event-tickets:
 
 Tickets tab
 -----------
 
-Create custom tickets (and ticket tiers) for events in the :guilabel:`Tickets` tab of an event form.
+In the :guilabel:`Tickets` tab of the event form, create custom registration tickets and ticket
+tiers for events.
 
 .. image:: create_events/tickets-tab.png
-   :align: center
    :alt: A typical tickets tab on an event form in the Odoo Events application.
 
-To create a ticket, click :guilabel:`Add a line` in the :guilabel:`Tickets` tab. Then, enter a name
-for the ticket (e.g. `Basic Ticket` or `VIP`) in the :guilabel:`Name` field.
-
-In the :guilabel:`Product` field, either select the pre-configured :guilabel:`Event Registration`
-product, or create a new one by typing in the name of the new event registration product, and then
-select either :guilabel:`Create` or :guilabel:`Create and edit...` from the resulting drop-down
-menu.
+To create a ticket, click :guilabel:`Add a line` in the :guilabel:`Tickets` tab. In the
+:guilabel:`Product` field, either select the preconfigured :guilabel:`Event Registration` product,
+or create a new one by typing in the name of the new event registration product and then selecting
+either :guilabel:`Create` or :guilabel:`Create and edit...` from the resulting drop-down menu. Then,
+enter a name for the ticket (e.g. `Basic Ticket` or `VIP`) in the :guilabel:`Name` field.
 
 .. important::
-   Upon installing Odoo *Events*, a new product type, *Event Ticket*, becomes available on product
-   forms (:menuselection:`Sales --> Products --> Products`). In order for an event registration
-   product to be selectable in the *Tickets* tab, the event registration :guilabel:`Product Type`
-   **must** be set to :guilabel:`Event Ticket`.
+   In order for an event registration product to be selectable in the :guilabel:`Tickets` tab, the
+   event registration :guilabel:`Product Type` **must** be set to :guilabel:`Service` and the
+   :guilabel:`Create on Order` field **must** be set to :guilabel:`Event Registration`.
 
 .. tip::
-   Existing event registration products can be modified directly from this field, as well, by
-   clicking the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon, located beside the event
-   registration product. Doing so reveals that product's form. If the *Inventory* application is
-   installed, additional choices are available to customize for the product.
+   Existing event registration products can be modified directly from this field as well by clicking
+   the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon located beside the event registration
+   product. Doing so reveals that product's form. If the **Inventory** application is installed,
+   additional choices are available to customize for the product.
 
 Next, set the registration cost of the ticket in the :guilabel:`Price` field.
 
 .. note::
-   The *Sales Price* defined on the event registration product's product form sets the default cost
-   of a ticket. Modifying the :guilabel:`Price` of a ticket in the :guilabel:`Tickets` tab, sets a
-   new registration cost of the ticket for that event.
+   The :guilabel:`Sales Price` defined on the event registration product's product form sets the
+   default cost of a ticket. Modifying the :guilabel:`Price` of a ticket in the :guilabel:`Tickets`
+   tab sets a new registration cost of the ticket for that event.
 
-Next, determine a :guilabel:`Sales Start` and :guilabel:`Sales End` date in their respective fields.
-To do that, click into the blank field to reveal a calendar popover. From there, select the desired
+Next, enter the :guilabel:`Sales Start` and :guilabel:`Sales End` dates in their respective fields.
+To do that, click into the blank field to reveal a calendar pop-over. From there, select the desired
 date and time, then click :icon:`fa-check` :guilabel:`Apply`.
 
 Then, if desired, designate a :guilabel:`Maximum` amount of that specific ticket that can be sold.
 
-The :guilabel:`Taken` column populates with the number of tickets that are sold.
-
-Optionally, in the :guilabel:`Color` column, add a custom color to differentiate ticket badges. The
-selected color displays on ticket badges when printed.
+The :guilabel:`Registration` column populates with the number of tickets that are sold.
 
 To delete any tickets from the :guilabel:`Tickets` tab, click the :icon:`fa-trash-o`
-:guilabel:`(trash can)` icon on the corresponding line for the ticket that should be deleted.
+:guilabel:`(trash can)` icon at the right in the corresponding line for the ticket that should be
+deleted.
 
 .. tip::
    To add an optional :guilabel:`Description` column to the :guilabel:`Tickets` tab, click the
@@ -221,14 +178,13 @@ Communication tab
 -----------------
 
 In the :guilabel:`Communication` tab of an event form, create various marketing communications that
-can be scheduled to be sent at specific intervals leading up to, and following, the event.
+can be scheduled to be sent at specific intervals leading up to and following the event.
 
 .. image:: create_events/communication-tab.png
-   :align: center
    :alt: Typical communication tab on an event form in the Odoo Events application.
 
 .. note::
-   By default, Odoo provides three separate pre-configured communications on every new event form.
+   By default, Odoo provides three separate preconfigured communications on every new event form.
    One is an email sent after each registration to confirm the purchase with the attendee. The other
    two are email event reminders that are scheduled to be sent at different time intervals leading
    up to the event to remind the recipient of the upcoming event.
@@ -237,41 +193,34 @@ To add a communication in the :guilabel:`Communication` tab, click :guilabel:`Ad
 select the desired type of communication in the :guilabel:`Send` field. The options are:
 :guilabel:`Mail`, :guilabel:`SMS`, :guilabel:`Social Post`, or :guilabel:`WhatsApp`.
 
-There is no limit to the number of communications that can be added in the :guilabel:`Communication`
-tab of an event form.
-
-To delete a communication from the :guilabel:`Communication` tab, click the :icon:`fa-trash-o`
-:guilabel:`(trash can)` icon on the corresponding communication line. Doing so removes the
-communication from the event entirely.
-
 .. important::
-   The :guilabel:`Social Post` option **only** appears if the *Social Marketing* application is
-   installed. The :guilabel:`WhatsApp` option **only** appears if the *WhatsApp Integration* module
-   is installed.
+   The :guilabel:`Social Post` option only appears if the **Social Marketing** application is
+   installed. The :guilabel:`WhatsApp` option only appears if the **WhatsApp** module is installed.
 
    :doc:`WhatsApp <../../productivity/whatsapp>` templates **cannot** be edited during active
    configuration. A separate approval from *Meta* is required.
 
-Mail
-~~~~
+Then, select an existing email template from the :guilabel:`Template` drop-down menu.
 
-Select an existing email template from the :guilabel:`Template` drop-down menu.
-
-Next, define the :guilabel:`Interval`, :guilabel:`Unit`, and :guilabel:`Trigger` from their
-respective drop-down fields, letting Odoo know when the communication should be sent.
-
-The :guilabel:`Unit` options are: :guilabel:`Immediately`, :guilabel:`Hours`, :guilabel:`Days`,
-:guilabel:`Weeks`, and :guilabel:`Months`.
+Next, define the :guilabel:`Interval` and :guilabel:`Unit` from their respective drop-down fields,
+letting Odoo know when the communication should be sent. The :guilabel:`Unit` options are:
+:guilabel:`Immediately`, :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, and
+:guilabel:`Months`.
 
 Then, select an option from the :guilabel:`Trigger` drop-down menu. The options are:
 :guilabel:`After each registration`, :guilabel:`Before the event`, and :guilabel:`After the event`.
 
-The :guilabel:`Sent` column populates with the number of sent communications. And, beside the
-number are different icons that appear, depending on the status of that particular communication.
+The :guilabel:`Sent` column populates with the number of sent communications. Next to the number are
+different icons that appear, depending on the status of that particular communication. The *Running*
+status is represented by a :icon:`fa-cogs` :guilabel:`(three gears)` icon. The *Sent* status is
+represented by a :icon:`fa-check` :guilabel:`(checkmark)` icon. And, the *Scheduled* status is
+represented by an :icon:`fa-hourglass-half` :guilabel:`(hourglass)` icon.
 
-The status of *Running* is represented by a :icon:`fa-cogs` :guilabel:`(three gears)` icon. The
-status of *Sent* is represented by a :icon:`fa-check` :guilabel:`(checkmark)` icon. And, the status
-of *Scheduled* is represented by an :icon:`fa-hourglass-half` :guilabel:`(hourglass)` icon.
+Any number of communications can be added in the :guilabel:`Communication` tab of an event form.
+
+To delete a communication from the :guilabel:`Communication` tab, click the :icon:`fa-trash-o`
+:guilabel:`(trash can)` icon on the corresponding communication line. Doing so removes the
+communication from the event entirely.
 
 .. example::
    To send a confirmation email an hour after an attendee registers for an event, configure the
@@ -305,24 +254,22 @@ to create more detailed reporting metrics, in addition to being utilized to crea
 generation rules.
 
 .. image:: create_events/questions-tab.png
-   :align: center
    :alt: Typical questions tab on an event form in the Odoo Events application.
 
 .. note::
    By default, Odoo provides three questions in the :guilabel:`Questions` tab for every event form.
-   The default questions require the registrant(s) to provide their :guilabel:`Name` and
-   :guilabel:`Email`, and make it optional to include their :guilabel:`Phone` number, as well.
+   The default questions require one or more registrants to provide their :guilabel:`Name`,
+   :guilabel:`Email`, and an optional :guilabel:`Phone` number as well.
 
    The information gathered from the :guilabel:`Questions` tab can be found on the
    :guilabel:`Attendees` dashboard, accessible via the :icon:`fa-users` :guilabel:`Attendees` smart
-   button. Odoo populates individual records that contain basic information about the registrant(s),
+   button. Odoo populates individual records that contain basic information about the registrants,
    as well as their preferences.
 
 To add a question in the :guilabel:`Questions` tab, click :guilabel:`Add a line`. Doing so reveals a
 :guilabel:`Create Question` pop-up window. From here, users can create and configure their question.
 
 .. image:: create_events/create-question-popup.png
-   :align: center
    :alt: The Create Question pop-up window that appears in the Odoo Events application.
 
 First, enter the question in the field at the top of the form. Then, decide if the question should
@@ -330,20 +277,20 @@ require a :guilabel:`Mandatory Answer` and/or if Odoo should :guilabel:`Ask once
 ticking their respective boxes, if desired.
 
 If the :guilabel:`Ask once per order` checkbox is ticked, the question will only be asked once, and
-its value is propogated to every attendee in the order (if multiple tickets are purchased at once).
-If the checkbox is *not* ticked for this setting, Odoo will present the question for every attendee
-that is connected to that registration.
+its value is applied to every attendee in the order (if multiple tickets are purchased at once). If
+the checkbox is **not** ticked for this setting, Odoo presents the question for every attendee that
+is connected to that registration.
 
 Next, select a :guilabel:`Question Type` option:
 
-- :guilabel:`Selection`: provide answer options to the question for registrants to choose from.
+- :guilabel:`Selection`: Provide answer options to the question for registrants to choose from.
   Selectable answer options can be managed in the :guilabel:`Answers` column at the bottom of the
   pop-up window.
-- :guilabel:`Text Input`: lets the users enter a custom response to the question in a text field.
-- :guilabel:`Name`: provides registrants with a field for them to enter their name.
-- :guilabel:`Email`: provides registrants with a field for them to enter their email address.
-- :guilabel:`Phone`: provides registrants with a field for them to enter their phone number.
-- :guilabel:`Company`: provides registrants with a field for them to enter a company they are
+- :guilabel:`Text Input`: Lets the users enter a custom response to the question in a text field.
+- :guilabel:`Name`: Provides registrants with a field for them to enter their name.
+- :guilabel:`Email`: Provides registrants with a field for them to enter their email address.
+- :guilabel:`Phone`: Provides registrants with a field for them to enter their phone number.
+- :guilabel:`Company`: Provides registrants with a field for them to enter a company they are
   associated with.
 
 Once all the desired configurations have been entered, either click :guilabel:`Save & Close` to save
@@ -369,8 +316,7 @@ showcasing the response metrics to that specific question.
 To delete any question from the :guilabel:`Questions` tab, click the :icon:`fa-trash-o`
 :guilabel:`(trash can)` icon on the corresponding question line.
 
-There is no limit to the number of questions that can be added in the :guilabel:`Questions` tab of
-an event form.
+Any number of questions can be added in the :guilabel:`Questions` tab of an event form.
 
 .. _events/event-notes:
 
@@ -381,7 +327,6 @@ In the :guilabel:`Notes` tab of an event form, users can leave detailed internal
 event-related instructions/information for attendees.
 
 .. image:: create_events/notes-tab.png
-   :align: center
    :alt: Typical notes tab on an event form in the Odoo Events application.
 
 In the :guilabel:`Note` field of the :guilabel:`Notes` tab, users can leave internal notes for other
@@ -405,9 +350,9 @@ button.
 To learn more about website design functionality and options, consult the :doc:`Building block
 <../../websites/website/web_design/building_blocks>` documentation.
 
-Once the event website is ready to be shared, click the red :guilabel:`Unpublished` toggle switch
-in the header menu, changing it to a green :guilabel:`Published` switch. At this point, the event
-web page is published, and viewable/accessible by all website visitors.
+Once the event website is ready to be shared, click the red :guilabel:`Unpublished` toggle switch in
+the header menu, changing it to a green :guilabel:`Published` switch. At this point, the event web
+page is published, and viewable/accessible by all website visitors.
 
 Send event invites
 ==================
@@ -422,11 +367,12 @@ documentation.
 
 Proceed to create and customize an email message to send as an invite to potential attendees.
 Remember to include a link to the registration page on the event website, allowing interested
-recipients to quickly register.
+recipients to register.
 
 .. tip::
    Sending emails from Odoo is subject to a daily limit, which, by default, is 200. To learn more
-   about daily limits, visit the :ref:`email-issues-outgoing-delivery-failure-messages-limit` documentation.
+   about daily limits, visit the :ref:`email-issues-outgoing-delivery-failure-messages-limit`
+   documentation.
 
 .. seealso::
    :doc:`track_manage_talks`

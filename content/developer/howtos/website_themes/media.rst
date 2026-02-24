@@ -34,10 +34,10 @@ reuse them), declare them like this:
    :caption: ``/website_airproof/data/images.xml``
 
    <record id="img_about_01" model="ir.attachment">
-       <field name="name">About Image 01</field>
-       <field name="datas" type="base64" file="website_airproof/static/src/img/content/img_about_01.jpg"/>
-       <field name="res_model">ir.ui.view</field>
-       <field name="public" eval="True"/>
+      <field name="name">About Image 01</field>
+      <field name="datas" type="base64" file="website_airproof/static/src/img/content/img_about_01.jpg" />
+      <field name="res_model">ir.ui.view</field>
+      <field name="public" eval="True" />
    </record>
 
 .. list-table::
@@ -68,7 +68,7 @@ In your xml templates, call your images as follows:
 
 .. code-block:: xml
 
-   <img src="/web/image/website_airproof.img_about_01" alt=""/>
+   <img src="/web/image/website_airproof.img_about_01" alt="" />
 
 Being `img_about_01` the id you gave to your image.
 
@@ -79,7 +79,9 @@ Background images
 
 .. code-block:: xml
 
-    <section style="background-image: url('/web/image/website_airproof.img_about_01');">
+   <section style="background-image: url('/web/image/website_airproof.img_about_01');">
+      <!-- Content -->
+   </section>
 
 .. _website_themes/media/images/use/logo:
 
@@ -91,11 +93,11 @@ file and then call it using the right template. For instance, to call inside the
 use `<t t-call="website.placeholder_header_brand">`.
 
 .. code-block:: xml
-    :caption: ``/website_airproof/data/images.xml``
+   :caption: ``/website_airproof/data/images.xml``
 
-    <record id="website.default_website" model="website">
-        <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png"/>
-    </record>
+   <record id="website.default_website" model="website">
+      <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png"/>
+   </record>
 
 .. note::
    :ref:`Here <theming/module/website>` you can find more information about the company logo setup
@@ -123,7 +125,7 @@ Add videos as background.
 .. code-block:: xml
 
    <section class="o_background_video" data-bg-video-src="...">
-       <!-- Content -->
+      <!-- Content -->
    </section>
 
 .. list-table::
@@ -141,12 +143,13 @@ Add videos as content.
 .. code-block:: xml
 
    <div class="media_iframe_video" data-oe-expression="...">
-       <div class="css_editable_mode_display" />
-       <div class="media_iframe_video_size" contenteditable="false" />
-       <iframe src="..."
-           frameborder="0"
-           contenteditable="false"
-           allowfullscreen="allowfullscreen"/>
+      <div class="css_editable_mode_display" />
+      <div class="media_iframe_video_size" contenteditable="false" />
+      <iframe
+         src="..."
+         frameborder="0"
+         contenteditable="false"
+         allowfullscreen="allowfullscreen" />
    </div>
 
 .. list-table::
@@ -173,7 +176,7 @@ correct.
 
 .. code-block:: xml
 
-   <span class="fa fa-picture-o"/>
+   <span class="fa fa-picture-o" />
 
 .. seealso::
    `Font Awesome v4 icons <https://fontawesome.com/v4/icons/>`_
@@ -182,13 +185,13 @@ Enable the Website Builder style options.
 
 .. code-block:: xml
 
-   <span class="fa fa-2x fa-picture-o rounded-circle"/>
+   <span class="fa fa-2x fa-picture-o rounded-circle" />
 
 Increase the icon size (fa-2x, fa-3x, fa-4x, or fa-5x classes).
 
 .. code-block:: xml
 
-   <span class="fa fa-2x fa-picture-o"/>
+   <span class="fa fa-2x fa-picture-o" />
 
 .. image:: media/icon-options.png
    :alt: Icon options

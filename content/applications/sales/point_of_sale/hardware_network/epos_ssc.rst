@@ -4,29 +4,40 @@
 Self-signed certificate for ePOS printers
 =========================================
 
+To work with Odoo, some printer models that can be used without an :doc:`IoT system
+</applications/general/iot>` may require the HTTPS protocol to establish a secure connection
+between the browser and the printer. However, trying to reach the printer's IP address using HTTPS
+results in a warning page in most web browsers. Force the connection to establish an HTTPS link and
+enable the printer in Odoo.
+
 .. important::
    Since the `Chromium 142 update <https://developer.chrome.com/release-notes/142>`_, using a
    self-signed certificate is no longer required. The recommended approach is to use the
    :doc:`Local Network Access <pos_lna>` method instead.
 
-To work with Odoo, some printer models that can be used without an
-:doc:`IoT system </applications/general/iot>` may require the HTTPS protocol to establish a secure
-connection between the browser and the printer. However, trying to reach the printer's IP address
-using HTTPS leads to a warning page on most web browsers.
+.. _pos/epos-ssc/certificate:
 
+Generation, export, and import of self-signed certificates
+==========================================================
 
-.. seealso::
-   :doc:`pos_lna`
-
-Generate, export, and import self-signed certificates
-=====================================================
-
-For a long-term solution, you must generate a **self-signed certificate**. Then, export and import
-it into your browser.
+Printers that operate without an :doc:`IoT box </applications/general/iot/iot_box>` still require
+secure communication, achieved by generating a self-signed certificate.
 
 .. important::
-   **Generating** an SSL certificate should only be done **once**. If you create another
-   certificate, devices using the previous one will lose HTTPS access.
+   - Generating an self-signed certificate should only be done **once**. Creating another
+     certificate causes devices using the previous one to lose HTTPS access.
+   - Printers that use an :doc:`IoT box </applications/general/iot/iot_box>` do not need a
+     self-signed certificate, as the IoT box generates it automatically.
+   - For stable results, it is strongly recommended to use the Google Chrome browser to generate
+     the self-signed certificate.
+
+.. note::
+   - To export self-signed certificates from an operating system or a web browser that has not been
+     mentioned in this documentation, search for `export SSL certificate` + `the name of your
+     browser or operating system` in the preferred search engine.
+   - Similarly, to import SSL certificates from an unspecified OS or browser, search for `import SSL
+     certificate root authority` + `the name of your browser or operating system` in the preferred
+     search engine.
 
 .. tabs::
 
@@ -36,68 +47,61 @@ it into your browser.
 
          .. tab:: Generate a self-signed certificate
 
-            Navigate to the ePOS' IP address (e.g., `https://192.168.1.25`) and force the
-            connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to [IP address]
-            (unsafe)`.
+            To generate a self-signed certificate on **Google Chrome**, follow the next steps:
 
-            .. figure:: epos_ssc/browser-https-insecure.png
-               :scale: 75%
-               :alt: warning page about the connection privacy on Google Chrome
+            #. Open the browser, type the printer’s IP address in the search bar (e.g.,
+               `https://192.168.1.25`), and press `Enter`.
+            #. On the security warning page, click :guilabel:`Advanced`, then :guilabel:`Proceed to
+               [IP address] (unsafe)` to force the connection.
+            #. On the EPSON homepage, follow these steps:
 
-               Warning page on Google Chrome, Windows 10
+               #. Click :guilabel:`Advanced Settings`, then :guilabel:`Administrator Login` to log
+                  in to the printer's homepage.
+               #. Paste the initial password located behind the printer in the :guilabel:`Current
+                  Password` field, then press `Enter`.
+               #. On the EPSON platform, go to :menuselection:`Network Security --> SSL/TLS -->
+                  Certificate`.
+               #. On the :guilabel:`Certificate` page, click :guilabel:`Update` under the
+                  :guilabel:`Self-signed Certificate` section.
+               #. Adapt the :guilabel:`Common Name` field to retain only the IP address, then click
+                  :guilabel:`Next`, then :guilabel:`OK`. Wait for the printer’s lights to stop
+                  blinking.
 
-            Then, sign in using your printer credentials to access the ePOS printer settings. To
-            sign in, enter `epson` in the :guilabel:`ID` field and your printer serial number in the
-            :guilabel:`Password` field.
+            .. image:: epos_ssc/browser-https-insecure.png
+              :alt: Warning page about the connection privacy on Google Chrome
+              :scale: 75 %
 
-            Click :guilabel:`Certificate List` in the :guilabel:`Authentication` section, and click
-            :guilabel:`create` to generate a new **Self-Signed Certificate**. The :guilabel:`Common
-            Name` should be automatically filled out. If not, fill it in with the printer IP address
-            number. Select the years the certificate will be valid in the :guilabel:`Validity
-            Period` field, click :guilabel:`Create`, and :guilabel:`Reset` or manually restart the
-            printer.
-
-            The self-signed certificate is generated. Reload the page and click :guilabel:`SSL/TLS`
-            in the :guilabel:`Security` section to ensure **Selfsigned Certificate** is correctly
-            selected in the :guilabel:`Server Certificate` section.
+            .. note::
+               The Epson homepage may vary depending on the printer model used. For the Epson TM-m30
+               ii, log in to the Epson homepage by typing `epson` as the username and the printer's
+               serial number as the password.
 
          .. tab:: Export a self-signed certificate
 
             The export process is heavily dependent on the :abbr:`OS (Operating System)` and the
-            browser. Start by accessing your ePOS printer settings on your web browser by navigating
-            to its IP address (e.g., `https://192.168.1.25`). Then, force the connection as
-            explained in the **Generate a self-signed certificate tab**.
+            browser. Start by accessing the printer settings on a web browser by navigating to its
+            IP address (e.g., `https://192.168.1.25`). Then, force the connection as explained in
+            the :guilabel:`Generate a self-signed certificate` tab.
 
-            If you are using **Google Chrome**,
+            To export the certificate on **Google Chrome**, follow the next steps:
 
-            #. click :guilabel:`Not secure` next to the search bar, and :guilabel:`Certificate is
-               not valid`;
+            #. Once the printer’s lights are solid, hover the mouse over the browser’s search bar
+               and click :guilabel:`Not secure`, then :guilabel:`Certificate details`.
+            #. Click the :guilabel:`Details` tab in the :guilabel:`Certificate Viewer` popover,
+               then click :guilabel:`Export`.
+            #. Add `.crt` next to the IP address in the :guilabel:`File name` field.
+            #. Set the :guilabel:`Save as type` field to `Base64-encoded ASCII, single certificate`.
+            #. Click :guilabel:`Save`.
 
-               .. image:: epos_ssc/browser-warning.png
-                  :alt: Connection to the printer not secure button in Google Chrome browser.
+            To export the certificate on **Mozilla Firefox**, follow the next steps:
 
-            #. go to the :guilabel:`Details` tab and click :guilabel:`Export`;
-            #. add `.crt` at the end of the file name to ensure it has the correct extension;
-            #. select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom of the
-               pop-up window;
-            #. save, and the certificate is exported.
-
-            .. warning::
-               Make sure that the certificate ends with the extension `.crt`. Otherwise, some
-               browsers might not see the file during the import process.
-
-            If you are using **Mozilla Firefox**,
-
-            #. click the **lock-shaped** icon on the left of the address bar;
-            #. go to :menuselection:`Connection not secure --> More information --> Security tab
-               --> View certificate`;
-
-            .. image:: epos_ssc/mozilla-not-secure.png
-               :alt: Connection is not secure button in Mozilla Firefox browser
-
-            #. scroll down to the :guilabel:`Miscellaneous` section;
-            #. click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;
-            #. save, and the certificate is exported.
+            #. Click :guilabel:`Not secure` next to the search bar.
+            #. Go to :menuselection:`Connection not secure --> More information`.
+            #. Click :guilabel:`View certificate` in the :guilabel:`Security` tab, then
+               :guilabel:`Details`.
+            #. Select the certificate, click :guilabel:`Export`, then select a folder in your local
+               drive.
+            #. Click :guilabel:`Close`.
 
          .. tab:: Import a self-signed certificate
 
@@ -108,182 +112,143 @@ it into your browser.
 
                .. tab:: Windows 10
 
-                  Windows 10 manages certificates, which means that self-signed certificates must be
-                  imported from the certification file rather than the browser. To do so,
+                  To import a self-signed certificate from **Google Chrome**:
 
-                  #. open the Windows File Explorer and locate the downloaded certification file;
-                  #. right-click on the certification file and click :guilabel:`Install
-                     Certificate`;
-                  #. select where to install the certificate and for whom - either for the
-                     :guilabel:`Current User` or all users (:guilabel:`Local Machine`). Then, click
-                     :guilabel:`Next`;
-                  #. on the `Certificate Store` screen, tick :guilabel:`Place all certificates in
-                     the following store`, click :guilabel:`Browse...`, and select
-                     :guilabel:`Trusted Root Certification Authorities`;
+                  #. Open the browser.
+                  #. Go to :menuselection:`Settings --> Privacy and security --> Security`, and
+                     click :guilabel:`Manage certificates`.
+                  #. Click :guilabel:`Manage imported certificates from Windows` on the
+                     :guilabel:`Certificate Manager` page.
+                  #. Click :guilabel:`Import` in the :guilabel:`Certificates` popover.
+                  #. Follow the next steps in the :guilabel:`Certificate Import Wizard`:
 
-                     .. image:: epos_ssc/win-cert-wizard-store.png
-
-                  #. click :guilabel:`Finish`, accept the pop-up security window;
-                  #. restart the computer to make sure that the changes are applied.
+                     #. Click :guilabel:`Next`, then :guilabel:`Browse` to select the certificate,
+                        then click :guilabel:`Next` again.
+                     #. Select the :guilabel:`Place all certificates in the following store` option.
+                     #. Click :guilabel:`Browse`, select the :guilabel:`Trusted Root Certification
+                        Authorities` folder, and click :guilabel:`OK`.
+                     #. Click :guilabel:`Next`, then :guilabel:`Finish`.
+                  #. Click :guilabel:`Yes` in the :guilabel:`Security Warning` popover.
 
                .. tab:: Linux
 
-                  If you are using **Google Chrome**,
+                  To import a self-signed certificate from **Google Chrome**:
 
-                  #. open Chrome;
-                  #. go to :menuselection:`Settings --> Privacy and security --> Security -->
-                     Manage certificates`;
-                  #. on the :guilabel:`Local certificates` tab, click :guilabel:`Installed by you` under the :guilabel:`Custom` section;
-                  #. click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and select
-                     the exported certification file from your local drive;
-                  #. accept all warnings;
-                  #. click :guilabel:`ok`;
-                  #. restart your browser.
+                  #. Open the browser.
+                  #. Go to :menuselection:`Settings --> Privacy and security --> Security`, and
+                     click :guilabel:`Manage certificates`.
+                  #. Click :guilabel:`Installed by you` under the :guilabel:`Custom` section on the
+                     :guilabel:`Local certificates` tab.
+                  #. Click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and select
+                     the exported certification file from your local drive.
+                  #. Accept all warnings.
+                  #. Click :guilabel:`ok`.
 
 
-                  If you are using **Mozilla Firefox**,
+                  To import a self-signed certificate from **Mozilla Firefox**:
 
-                  #. open Firefox;
-                  #. go to :menuselection:`Settings --> Privacy & Security --> Security --> View
-                     Certificates... --> Import`;
-                  #. in the pop-up window, open the :guilabel:`Servers` tab;
-                  #. click :guilabel:`Add Exception...`;
-                  #. enter the printer's IP address in the :guilabel:`Location` field, then
-                     click :guilabel:`Get Certificate`;
-                  #. tick the :guilabel:`Permanently store this exception` checkbox and confirm;
-                  #. restart your browser.
+                  #. Open the browser.
+                  #. Go to :menuselection:`Settings --> Privacy & Security --> Security --> View
+                     Certificates`.
+                  #. In the :guilabel:`Certificate Manager` popover, click the :guilabel:`Your
+                     Certificates` tab, then :guilabel:`Import`, and select the certificate in your
+                     local drive.
+                  #. Click the :guilabel:`Servers` tab in the :guilabel:`Certificate Manager`
+                     popover.
+                  #. Click :guilabel:`Add Exception`.
+                  #. Enter the printer's IP address in the :guilabel:`Location` field, then
+                     click :guilabel:`Get Certificate`.
+                  #. Enable the :guilabel:`Permanently store this exception` option and confirm.
 
    .. tab:: Mac OS
-
-      On Mac OS, you can secure the connection for all browsers by following these steps:
-
-      #. open Safari and navigate to your printer's IP address. Doing so leads to a warning page;
-      #. on the warning page,  go to :menuselection:`Show Details --> visit this website --> Visit
-         Website`, validate;
-      #. reboot the printer so you can use it with any other browser.
-
-      To generate and export an SSL certificate and send it to IOS devices, open **Google Chrome**
-      or **Mozilla Firefox**. Then,
 
       .. tabs::
 
          .. tab:: Generate a self-signed certificate
 
-            Navigate to the ePOS' IP address (e.g., `https://192.168.1.25`) and force the
-            connection by clicking :guilabel:`Advanced` and :guilabel:`Proceed to [IP address]
-            (unsafe)`.
+            To generate a self-signed certificate using the `Keychain Access
+            <https://support.apple.com/en-gb/guide/keychain-access/kyca8916/mac>`_ app on Mac,
+            follow the next steps:
 
-            .. figure:: epos_ssc/browser-https-insecure.png
-               :scale: 75%
-               :alt: Warning page about the connection privacy on Google Chrome
-
-               Warning page on Google Chrome, Windows 10
-
-            Then, sign in using your printer credentials to access the ePOS printer settings. To
-            sign in, enter `epson` in the :guilabel:`ID` field and your printer serial number in the
-            :guilabel:`Password` field.
-
-            Click :guilabel:`Certificate List` in the :guilabel:`Authentication` section, and click
-            :guilabel:`create` to generate a new **Self-Signed Certificate**. The :guilabel:`Common
-            Name` should be automatically filled out. If not, fill it in with the printer IP address
-            number. Select the years the certificate will be valid in the :guilabel:`Validity
-            Period` field, click :guilabel:`Create`, and :guilabel:`Reset` or manually restart the
-            printer.
-
-            The self-signed certificate is generated. Reload the page and click :guilabel:`SSL/TLS`
-            in the :guilabel:`Security` section to ensure **Selfsigned Certificate** is correctly
-            selected in the :guilabel:`Server Certificate` section.
+            #. Access the :guilabel:`Keychain Access` app on Mac.
+            #. Go to :menuselection:`Access --> Certificate Assistant --> Create a Certificate`.
+            #. Enter a name for the certificate.
+            #. Select an identity type, then the type of certificate.
+            #. Click :guilabel:`Create`.
+            #. Review the certificate, then click :guilabel:`Done`.
 
          .. tab:: Export a self-signed certificate
 
-            The export process is heavily dependent on the :abbr:`OS (Operating System)` and the
-            browser. Start by accessing your ePOS printer settings on your web browser by navigating
-            to its IP address (e.g., `https://192.168.1.25`). Then, force the connection as
-            explained in the **Generate a self-signed certificate tab**.
+            To export a self-signed certificate from **Google Chrome**:
 
-            If you are using **Google Chrome**,
+            #. Open the browser, type the printer’s IP address in the search bar (e.g.,
+               `https://192.168.1.25`), and press `Enter`.
+            #. On the security warning page, click :guilabel:`Advanced`, then :guilabel:`Proceed to
+               [IP address] (unsafe)` to force the connection.
+            #. Click :guilabel:`Not secure` next to the search bar, then :guilabel:`Certificate is
+               not valid`.
+            #. Go to the :guilabel:`Details` tab and click :guilabel:`Export`.
+            #. Add `.crt` at the end of the file name to ensure it has the correct extension.
+            #. Select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom of the
+               popover.
+            #. Click :guilabel:`Save`.
 
-            #. click :guilabel:`Not secure` next to the search bar, and :guilabel:`Certificate is
-               not valid`;
+            To export the certificate on **Mozilla Firefox**, follow the next steps:
 
-               .. image:: epos_ssc/browser-warning.png
-                  :alt: Connection to the printer not secure button in Google Chrome
-
-            #. go to the :guilabel:`Details` tab and click :guilabel:`Export`;
-            #. add `.crt` at the end of the file name to ensure it has the correct extension;
-            #. select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom of the
-               pop-up window;
-            #. save, and the certificate is exported.
-
-            .. warning::
-               Make sure that the certificate ends with the extension `.crt`. Otherwise, some
-               browsers might not find the file during the import process.
-
-            If you are using **Mozilla Firefox**,
-
-            #. click the **lock-shaped** icon on the left of the address bar;
-            #. go to :menuselection:`Connection not secure --> More information --> Security tab
-               --> View certificate`;
-
-               .. image:: epos_ssc/mozilla-not-secure.png
-                  :alt: Connection is not secure button in Mozilla Firefox
-
-            #. scroll down to the :guilabel:`Miscellaneous` section;
-            #. click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;
-            #. save, and the certificate is exported.
+            #. Click :guilabel:`Not secure` next to the search bar.
+            #. Go to :menuselection:`Connection not secure --> More information`.
+            #. Click :guilabel:`View certificate` in the :guilabel:`Security` tab, then
+               :guilabel:`Details`.
+            #. Select the certificate, click :guilabel:`Export`, then select a folder in your local
+               drive.
+            #. Click :guilabel:`Close`.
 
    .. tab:: Android OS
 
-      To import an SSL certificate into an Android device, first create and export it from a
-      computer. Next, transfer the `.crt` file to the device using email, Bluetooth, or USB. Once
-      the file is on the device,
+      To import a self-signed certificate into an Android device, first create and export it from a
+      computer. Next, transfer the `.crt` file to the device via email, Bluetooth, or USB. Once
+      the file is on the device, follow the next steps:
 
-      #. open the settings and search for `certificate`;
-      #. click :guilabel:`Certificate AC` (Install from device storage);
-      #. select the certificate file to install it on the device.
+      #. Go to the device settings.
+      #. Type `certificate` in the search bar.
+      #. Click :guilabel:`Certificate AC`, then :guilabel:`Install from device storage`.
+      #. Select the certificate file to install it on the device.
 
       .. Note::
-         The specific steps for installing a certificate may vary depending on the version of
-         Android and the device manufacturer.
+         - The specific steps for installing a certificate may vary depending on the Android version
+           and the device manufacturer.
+         - Install the EPSON ePOS SDK for JavaScript on each mobile device if required.
+         - Download the certificate on a computer if the tablet restricts direct downloads. Forward
+           the file via email, then open it directly from the tablet to complete the installation.
 
    .. tab:: iOS
 
-      To import an SSL certificate into an iOS device, first create and export it from a computer.
-      Then, transfer the `.crt` file to the device using email, Bluetooth, or any file-sharing
-      service.
+      To import a self-signed certificate into an iOS device, first create and export it from a
+      computer. Then, transfer the `.crt` file to the device via email, Bluetooth, or any
+      file-sharing service.
 
-      Downloading this file triggers a warning pop-up window. Click :guilabel:`Allow` to download
-      the configuration profile, and close the second pop-up window. Then,
+      Downloading this file triggers a warning popover. Click :guilabel:`Allow` to download the
+      configuration profile, and close the second popover. Then follow the next steps:
 
-      #. go to the **Settings App** on the iOS device;
-      #. click :guilabel:`Profile Downloaded` under the user's details box;
-      #. locate the downloaded `.crt` file and select it;
-      #. click :guilabel:`Install` on the top right of the screen;
-      #. if a passcode is set on the device, enter the passcode;
-      #. click :guilabel:`Install` on the top right of the certificate warning screen and the pop-up
-         window;
-      #. click :guilabel:`Done`.
+      #. Go to the **Settings** app on the iOS device.
+      #. Click :guilabel:`Profile Downloaded` under the user's details box.
+      #. Locate the downloaded `.crt` file and select it.
+      #. Click :guilabel:`Install` in the top-right corner.
+      #. Enter a passcode if needed.
+      #. Click :guilabel:`Install` in the top-right corner of the certificate warning screen and
+         the popover.
+      #. Click :guilabel:`Done`.
 
-      .. image:: epos_ssc/ssl-ios-verified.png
+      The certificate is installed, but needs to be authenticated:
 
-      The certificate is installed, but it still needs to be authenticated. To do so,
+      #. Go to :menuselection:`Settings --> General --> About > Certificate Trust Settings`.
+      #. Enable the installed certificate using the :icon:`fa-toggle-on` (switch) toggle.
+      #. Click :guilabel:`Continue` in the popover.
 
-      #. go to :menuselection:`Settings --> General --> About > Certificate Trust Settings`;
-      #. enable the installed certificate using the **slide button**;
-      #. click :guilabel:`Continue` on the pop-up window.
+Certificate import verification
+===============================
 
-.. important::
-   - If you need to export SSL certificates from an operating system or web browser that has not
-     been mentioned, search for `export SSL certificate` + `the name of your browser or operating
-     system` in your preferred search engine.
-   - Similarly, to import SSL certificates from an unmentioned OS or browser, search for `import SSL
-     certificate root authority` + `the name of your browser or operating system` in your preferred
-     search engine.
-
-Check if the certificate was imported correctly
-===============================================
-
-To confirm your printer's connection is secure, connect to its IP address using HTTPS. For example,
-navigate to `https://192.168.1.25` in your browser. If the SSL certificate has been applied
-correctly, you should no longer see a warning page, and the address bar should display a padlock
-icon, indicating that the connection is secure.
+To confirm the printer's connection is secure, connect to its IP address using HTTPS. For example,
+navigate to `https://192.168.1.25` in a browser. If the self-signed certificate has been applied
+correctly, no warning page appears, and the address bar should display a padlock icon, indicating a
+secure connection.

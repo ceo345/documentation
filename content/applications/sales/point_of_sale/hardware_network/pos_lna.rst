@@ -8,7 +8,7 @@ Local Network Access
 is a security feature that limits a website's ability to send requests to servers on a local
 network. Access requires explicit user permission, which makes it possible to grant network access
 to a specific web page. Using |LNA|, Odoo Point of Sale can communicate with devices with local
-access, such as :ref:`supported ePOS printers <pos/epos_printers/supported-printers>`, directly
+access, such as :ref:`supported ePOS printers <pos/epos-printers/supported-printers>`, directly
 from the browser and without requiring an :doc:`SSL certificate <epos_ssc>`.
 
 .. note::
@@ -39,7 +39,7 @@ Browser permission
 ==================
 
 Once |LNA| is activated in Odoo and a device with local access, such as an :ref:`ePOS printer
-<pos/epos_printers/supported-printers>`, is configured, the browser displays a popup requesting
+<pos/epos-printers/supported-printers>`, is configured, the browser displays a popup requesting
 permission to communicate with the devices on the local network.
 
 .. image:: pos_lna/pos-lna.png

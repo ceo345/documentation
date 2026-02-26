@@ -134,7 +134,7 @@ Fiscal localization modules are available for the countries listed below.
 - :doc:`Spain <fiscal_localizations/spain>`
 - Sweden
 - :doc:`Switzerland <fiscal_localizations/switzerland>`
-- Taiwan
+- :doc:`Taiwan <fiscal_localizations/taiwan>`
 - Tanzania
 - :doc:`Thailand <fiscal_localizations/thailand>`
 - Tunisia
@@ -185,6 +185,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/singapore
    fiscal_localizations/spain
    fiscal_localizations/switzerland
+   fiscal_localizations/taiwan
    fiscal_localizations/thailand
    fiscal_localizations/turkiye
    fiscal_localizations/united_arab_emirates

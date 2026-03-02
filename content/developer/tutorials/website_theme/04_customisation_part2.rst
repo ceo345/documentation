@@ -126,7 +126,7 @@ that, add the gradient to the website builder so that the client can easily reus
          <section data-snippet="s_dynamic_snippet_products" class="s_dynamic_snippet_products s_dynamic
          s_dynamic_empty pt32 pb32 o_colored_level s_product_product_airproof o_dynamic_snippet_empty o_cc o_cc5"
          data-custom-template-data="{}" data-name="Produits" data-product-category-id="all"
-         data-show-variants="" data-number-of-records="16" data-filter-id="3" data-carousel-interval="5000"
+         data-split-variants="" data-number-of-records="16" data-filter-id="3" data-carousel-interval="5000"
          data-template-key="website_airproof.dynamic_filter_template_product_product_airproof"
          style="background-image: linear-gradient(0deg, rgb(41, 128, 187) 0%, rgb(11, 142, 230) 100%) !important;">
             [...]

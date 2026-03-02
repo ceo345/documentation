@@ -1377,14 +1377,15 @@ Many2many Tags (`many2many_tags`)
 
             <field name="category_id" widget="many2many_tags" options="{'edit_tags': true}" />
 
-Many2many Tags - Form View (`form.many2many_tags`)
-    Specialization of `many2many_tags` widget for form views. It has some extra
-    code to allow editing the color of a tag.
+    - `visibleItemsLimit`: Number of tags to display. Set to 0 to always display all tags.
+      (default: `8`).
 
-    - Supported field types: `many2many`
+        .. code-block:: xml
+
+            <field name="category_id" widget="many2many_tags" options="{'visibleItemsLimit': 20}" />
 
 Many2many Tags - Kanban View (`kanban.many2many_tags`)
-    Specialization of `many2many_tags` widget for kanban views.
+    A read-only specialization of `many2many_tags` widget for kanban views.
 
     - Supported field types: `many2many`
 

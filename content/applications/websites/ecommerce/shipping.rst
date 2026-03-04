@@ -122,4 +122,7 @@ To allow customers to reserve products online and pay for/collect them in-store,
      selector on the product page.
    - Each warehouse must have a **complete address** to ensure its location is accurately displayed
      to customers. Incomplete addresses prevent the warehouse from being shown.
+   - In multi-company, the company assigned to each warehouse must be identical to the company
+     assigned to the website where the method is used. If these do not match, the pickup location
+     cannot be selected.
    - The Click & Collect option is not available for services.

@@ -268,8 +268,8 @@ Use case
 --------
 
 Once you have :doc:`created <../../finance/accounting/customer_invoices>` an invoice and confirmed
-it, click :guilabel:`Send & Print`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and
-click :guilabel:`Send & Print` again. Once the invoice is sent, the generated XML file is available
+it, click :guilabel:`Send`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and
+click :guilabel:`Send` again. Once the invoice is sent, the generated XML file is available
 in the **chatter**.
 
 .. warning::

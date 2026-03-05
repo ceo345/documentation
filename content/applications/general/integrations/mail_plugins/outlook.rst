@@ -6,6 +6,14 @@ Outlook allows for third-party applications to connect in order to execute datab
 emails. Odoo has a plugin for Outlook that allows for the creation of an opportunity from the email
 panel.
 
+.. important::
+   Make sure to check the database version in the :guilabel:`Settings app --> General Settings`, at
+   the bottom of the page.
+
+   For database versions 19.2 and later, see the `latest documentation
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
+
 Configuration
 =============
 

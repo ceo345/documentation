@@ -30,7 +30,7 @@ In most cases, credit notes are created directly from the corresponding invoices
 go to :menuselection:`Accounting --> Customers --> Invoices`, open the relevant :guilabel:`Invoice`,
 and click :guilabel:`Credit Note`.
 
-In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason displayed on Credit Note` and
+In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason` and
 update the :guilabel:`Journal` and :guilabel:`Reversal date` if needed.
 There are two options:
 

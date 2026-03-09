@@ -4,10 +4,9 @@ External RPC API
 
 .. danger::
 
-   .. deprecated:: 19.0
-
    Both the XML-RPC and JSON-RPC APIs at endpoints ``/xmlrpc``, ``/xmlrpc/2`` and ``/jsonrpc`` are
-   scheduled for removal in Odoo 20 (fall 2026). The :doc:`external_api` acts as a replacement.
+   scheduled for removal in Odoo 22 (fall 2028) and Online 21.1 (winter 2027). The
+   :doc:`external_api` acts as a replacement.
 
    The other controllers ``@route(type='jsonrpc')`` (known until Odoo 18 as ``type='json'``) are not
    subject to this deprecation notice.

@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-06 18:31+0000\n"
-"PO-Revision-Date: 2026-03-05 23:20+0000\n"
+"PO-Revision-Date: 2026-03-09 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/productivity/zh_Hans/>\n"
@@ -872,29 +872,31 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:3
 msgid "AI default prompts"
-msgstr ""
+msgstr "AI 默认提示词"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:7
 msgid ""
 "*Default prompts* define how |AI| behaves when a user opens a conversation "
 "from a specific model in Odoo. They allow users to:"
 msgstr ""
+"*默认提示语* 定义了当用户在Odoo中从特定模型开启对话时，|AI| 的行为模式。这些"
+"提示语允许用户："
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:10
 msgid "Automatically call a specific |AI| agent"
-msgstr ""
+msgstr "自动调用特定 |AI| 代理"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:11
 msgid "Apply contextual instructions"
-msgstr ""
+msgstr "应用上下文指令"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:12
 msgid "Display predefined action buttons"
-msgstr ""
+msgstr "显示预定义操作按钮"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:13
 msgid "Adapt |AI| behavior depending on the model"
-msgstr ""
+msgstr "根据模型特性调整 |AI| 行为"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:15
 msgid ""
@@ -902,6 +904,8 @@ msgid ""
 "models. This means the |AI| can behave differently depending on where it is "
 "launched in the system."
 msgstr ""
+"默认提示语虽适用于所有模型，但具有模型特异性。这意味着|AI|在系统不同位置调用"
+"时可能表现出差异化行为。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:18
 msgid ""
@@ -909,6 +913,8 @@ msgid ""
 "context of that record to the |AI| agent. This includes field values and "
 "relevant metadata."
 msgstr ""
+"当用户从记录中打开|AI|对话时，Odoo 会向|AI|代理提供该记录的完整上下文信息。这"
+"包括字段值和相关元数据。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:21
 msgid ""
@@ -917,6 +923,9 @@ msgid ""
 "receives accounting context. The conversation is isolated and reset once "
 "closed."
 msgstr ""
+"每次对话都与上下文相关联。当从潜在客户记录打开对话时，|AI|会获取该潜在客户的"
+"相关信息；当从发票打开对话时，|AI|则接收财务上下文信息。对话具有独立性，关闭"
+"后将自动重置。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:26
 #: ../../content/applications/productivity/ai/document_sort.rst:16
@@ -935,6 +944,8 @@ msgid ""
 "Before configuring a default prompt, create or configure the |"
 "AI| :ref:`agent <ai/create-agent>` in the **AI** application."
 msgstr ""
+"在配置默认提示符之前，请在**AI**应用程序中创建或配置|AI| :ref:`代理 <ai/"
+"create-agent>`。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:32
 msgid ""
@@ -942,6 +953,8 @@ msgid ""
 "prompts. These vary based on the other applications installed on the "
 "database."
 msgstr ""
+"该**AI**应用程序自带预配置的代理和默认提示词。这些内容会根据数据库中安装的其"
+"他应用程序而有所不同。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:35
 msgid ""
@@ -949,6 +962,9 @@ msgid ""
 "and click :guilabel:`New`. Create a :guilabel:`Rule Name`, then select an "
 "action in the :guilabel:`When users need to` field."
 msgstr ""
+"前往 :menuselection:`AI 应用 --> 配置 --> 默认提示词`，点击 :guilabel:`新"
+"建`。创建一个 :guilabel:`规则名称`，然后在 :guilabel:`当用户需要`字段中选择一"
+"个操作。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:38
 msgid ""
@@ -958,12 +974,17 @@ msgid ""
 "Multiple selections can be made in this field. To allow this rule to be used "
 "by any model, leave the field blank."
 msgstr ""
+"接下来，在 :guilabel:`应用于模型` 字段中选择一个模型。此字段控制规则适用的记"
+"录范围。例如，若规则仅适用于 *服务台* 工单，请从下拉菜单中选择 *服务台工单*。"
+"该字段支持多选。若需使规则适用于任意模型，请保持字段空白。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:43
 msgid ""
 "In the :guilabel:`Call the Agent` field, select which agent this rule should "
 "apply to. Next, add the :guilabel:`Instructions` for the rule."
 msgstr ""
+"在 :guilabel:`呼叫代理` 字段中，选择该规则应适用的代理。接下来，添加该规则的 "
+":guilabel:`操作说明`。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:47
 msgid ""
@@ -972,10 +993,13 @@ msgid ""
 "context of the current model. See :ref:`Understanding AI prompt structure "
 "<ai/prompt-structure>` below for additional information."
 msgstr ""
+"尽管该代理可能已有定义其行为的现有提示词，但默认提示词中的指令会在当前模型的"
+"上下文中定义其行为。更多信息请参阅下文 :ref:`理解AI提示词结构 <ai/prompt-"
+"structure>`。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:None
 msgid "A default prompt rule record in the AI app."
-msgstr ""
+msgstr "AI 应用中的默认提示规则记录。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:55
 #: ../../content/applications/productivity/whatsapp.rst:585
@@ -988,31 +1012,35 @@ msgid ""
 "prompts. While users have the option to write out a prompt, they can also "
 "click one of the buttons to begin the conversation."
 msgstr ""
+"在每个默认提示框中，按钮均可配置预设提示内容。用户既可自行编写提示语，也可点"
+"击按钮直接启动对话。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:60
 msgid ""
 "On the *Buttons* tab, click :guilabel:`Add a line`, then enter a prompt in "
 "the :guilabel:`AI Prompt` field."
 msgstr ""
+"在*按钮*选项卡中，点击 :guilabel:`添加一行`，然后在 :guilabel:`AI 提示词`字段"
+"中输入提示词。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:63
 msgid ""
 "These prompts are then available for a user to select in a conversation."
-msgstr ""
+msgstr "这些提示随后可在对话中供用户选择。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:None
 msgid "AI prompts configured as buttons in a conversation with an agent."
-msgstr ""
+msgstr "在与代理的对话中，AI 提示以按钮形式呈现。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:71
 msgid "Understanding AI prompt structure"
-msgstr ""
+msgstr "理解 AI 提示词结构"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:73
 msgid ""
 "|AI| conversations in Odoo are structured using multiple configuration "
 "layers."
-msgstr ""
+msgstr "Odoo 中的 |AI| 对话采用多层配置结构进行构建。"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:75
 msgid ""

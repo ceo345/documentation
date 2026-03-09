@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-06 18:31+0000\n"
-"PO-Revision-Date: 2026-03-04 23:20+0000\n"
+"PO-Revision-Date: 2026-03-09 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/hr/zh_Hans/>\n"
@@ -76,23 +76,23 @@ msgstr "每份考评都包括以下信息："
 
 #: ../../content/applications/hr/appraisals/360.rst:26
 msgid ":guilabel:`Survey Name`: The name of the specific survey."
-msgstr ""
+msgstr ":guilabel:`调查名称`：该特定调查的名称。"
 
 #: ../../content/applications/hr/appraisals/360.rst:27
 msgid ""
 ":guilabel:`Responsible`: The employee responsible for the survey, including "
 "the month and year they were given that designation."
-msgstr ""
+msgstr ":guilabel:`责任人`：负责该调查的员工，包括其被指定该职责的月份和年份。"
 
 #: ../../content/applications/hr/appraisals/360.rst:29
 msgid ""
 ":guilabel:`Questions`: The number of questions in that particular survey."
-msgstr ""
+msgstr ":guilabel:`问题数`：该特定调查中的问题数量。"
 
 #: ../../content/applications/hr/appraisals/360.rst:30
 msgid ""
 ":guilabel:`Completed`: The number of people who have completed the survey."
-msgstr ""
+msgstr ":guilabel:`已完成`：已完成调查的人数。"
 
 #: ../../content/applications/hr/appraisals/360.rst:32
 msgid ""
@@ -100,6 +100,8 @@ msgid ""
 "the survey line. This opens the appraisal in a new tab to preview the "
 "questions without submitting answers. Close the tab to return to the list."
 msgstr ""
+"要测试调查问卷，请点击调查行右侧的 :guilabel:`测试` 按钮。这将在新标签页中打"
+"开评估表，供您预览问题而无需提交答案。关闭该标签页即可返回列表。"
 
 #: ../../content/applications/hr/appraisals/360.rst:39
 msgid "Request feedback"
@@ -117,10 +119,12 @@ msgid ""
 "up window appears, using the :guilabel:`Appraisal: Ask Feedback` email "
 "template."
 msgstr ""
+"点击 :guilabel:`征求反馈` 按钮，将弹出 *征求反馈* 邮件窗口，使用 "
+":guilabel:`评估：征求反馈` 邮件模板。"
 
 #: ../../content/applications/hr/appraisals/360.rst:48
 msgid "Only confirmed appraisals display the :guilabel:`Ask Feedback` button."
-msgstr ""
+msgstr "仅已确认的评估会显示 :guilabel:`请求反馈`按钮。"
 
 #: ../../content/applications/hr/appraisals/360.rst:50
 msgid ""
@@ -130,18 +134,23 @@ msgid ""
 "day the appraisal is due. Use the calendar selector to modify the date, if "
 "desired."
 msgstr ""
+"首先，通过下拉菜单在 :guilabel:`收件人` 字段中选择需要提供反馈的员工。可同时"
+"选择多名员工。 :guilabel:`答复截止日期` 将自动设置为评估截止日。如需修改日期"
+"，请使用日历选择器进行调整。"
 
 #: ../../content/applications/hr/appraisals/360.rst:55
 msgid ""
 "The :guilabel:`Subject` is populated with `Take part in (Employee Name) "
 "appraisal`, but can be modified if desired."
-msgstr ""
+msgstr "标签 :guilabel:`主题`默认填充为`参与（员工姓名）绩效评估`，但可根据需要修改。"
 
 #: ../../content/applications/hr/appraisals/360.rst:58
 msgid ""
 "Type in any additional comments in the space provided, if desired. The email "
 "template copy is *not* displayed in the pop-up window."
 msgstr ""
+"如有需要，请在指定区域输入其他备注。请注意，电子邮件模板内容*不会*显示在弹出"
+"窗口中。"
 
 #: ../../content/applications/hr/appraisals/360.rst:61
 msgid ""
@@ -164,38 +173,43 @@ msgid ""
 "dashboard loads, and presents a list of everyone requested to submit "
 "feedback. Each line displays the following information:"
 msgstr ""
+"要查看结果，请点击调查表单上的 :icon:`fa-pencil-square-o` :guilabel:`反馈` 按"
+"钮。系统将加载 *反馈调查* 仪表板，并显示所有被要求提交反馈的用户列表。每行信"
+"息包含以下内容："
 
 #: ../../content/applications/hr/appraisals/360.rst:75
 msgid ""
 ":guilabel:`Employee`: The name of the employee who was requested to submit "
 "feedback."
-msgstr ""
+msgstr ":guilabel:`员工`：被要求提交反馈的员工姓名。"
 
 #: ../../content/applications/hr/appraisals/360.rst:76
 msgid ""
 ":guilabel:`Status`: An icon indicating if the feedback was :ref:`completed "
 "<appraisals/completed-360>` or :ref:`new <appraisals/new-360>`."
 msgstr ""
+":guilabel:`状态`：一个图标，用于指示反馈是否为 :ref:`已完成 <appraisals/"
+"completed-360>` 或 :ref:`新建 <appraisals/new-360>`。"
 
 #: ../../content/applications/hr/appraisals/360.rst:78
 msgid ":guilabel:`Deadline`: The date and time the survey must be completed."
-msgstr ""
+msgstr ":guilabel:`截止日期`：调查必须完成的日期和时间。"
 
 #: ../../content/applications/hr/appraisals/360.rst:79
 msgid ""
 ":guilabel:`Survey`: The name of the survey, which is :guilabel:`Employee "
 "Opinion Form` by default."
-msgstr ""
+msgstr ":guilabel:`网上调查`：调查名称，默认为 :guilabel:`员工意见表`。"
 
 #: ../../content/applications/hr/appraisals/360.rst:None
 msgid "The list of all feedback requests on the Feedback Surveys dashboard."
-msgstr ""
+msgstr "反馈调查仪表板上的所有反馈请求列表。"
 
 #: ../../content/applications/hr/appraisals/360.rst:86
 msgid ""
 "Feedback requests that have been sent but have **not** been completed are "
 "referred to as *new*."
-msgstr ""
+msgstr "已发送但**尚未**完成的反馈请求被称为*新*请求。"
 
 #: ../../content/applications/hr/appraisals/360.rst:88
 msgid ""
@@ -204,16 +218,19 @@ msgid ""
 "select :guilabel:`360 Feedback` in the :guilabel:`Survey` field, then "
 "click :guilabel:`See Results`. The combined feedback loads in a new tab."
 msgstr ""
+"要查看所有回复，请点击 :guilabel:`查看结果`按钮，系统将加载*选择调查*弹出窗口"
+"。通过下拉菜单在 :guilabel:`调查`字段中选择 :guilabel:`360度反馈`，然后点击 "
+":guilabel:`查看结果`。综合反馈将加载到新标签页中。"
 
 #: ../../content/applications/hr/appraisals/360.rst:95
 msgid "Completed 360 feedback"
-msgstr ""
+msgstr "已完成360度反馈"
 
 #: ../../content/applications/hr/appraisals/360.rst:97
 msgid ""
 "Feedback requests that have been completed display a "
 "green :guilabel:`Completed` status tag on the *Feedback Surveys* dashboard."
-msgstr ""
+msgstr "已完成的反馈请求在*反馈调查*仪表板上显示绿色 :guilabel:`已完成`状态标签。"
 
 #: ../../content/applications/hr/appraisals/360.rst:100
 msgid ""
@@ -221,20 +238,24 @@ msgid ""
 "click :icon:`fa-check-square-o` :guilabel:`See Answers` at the end of the "
 "line, and the employee's individual responses load in a new tab."
 msgstr ""
+"要查看已完成反馈表的个人回答，请点击行末的图标:icon:`fa-check-square-o` "
+":guilabel:`查看答案`，员工的个人回答将在新标签页中加载。"
 
 #: ../../content/applications/hr/appraisals/360.rst:104
 msgid "Close the tab when the review is complete."
-msgstr ""
+msgstr "完成审核后请关闭标签页。"
 
 #: ../../content/applications/hr/appraisals/360.rst:109
 msgid "New 360 feedback"
-msgstr ""
+msgstr "全新360度反馈"
 
 #: ../../content/applications/hr/appraisals/360.rst:111
 msgid ""
 "Feedback requests that were sent but have not been completed display a "
 "blue :guilabel:`New` status tag on the *Feedback Surveys* dashboard."
 msgstr ""
+"已发送但尚未完成的反馈请求，在*反馈调查*仪表板上会显示蓝色： :guilabel:`新`状"
+"态标签。"
 
 #: ../../content/applications/hr/appraisals/360.rst:114
 msgid ""
@@ -242,6 +263,9 @@ msgid ""
 "o` :guilabel:`Resend` at the end of the line, and an *Ask Feedback* pop-up "
 "window loads. Click :guilabel:`Send` to resend the feedback request."
 msgstr ""
+"如有必要，可重新发送请求。点击行末的 :icon:`fa-check-square-o` :guilabel:`重"
+"新发送`，系统将加载*请求反馈*弹出窗口。点击 :guilabel:`发送`即可重新发送反馈"
+"请求。"
 
 #: ../../content/applications/hr/appraisals/appraisal_analysis.rst:3
 msgid "Appraisal analysis"
@@ -570,6 +594,10 @@ msgid ""
 "needed, such as department-specific appraisal templates, new "
 "templates :ref:`can be created <appraisals/create-template>`."
 msgstr ""
+"**考评**应用程序采用预配置的默认模板，该模板具有通用性，适用于所有员工。如需"
+"修改，默认模板 :ref:`可进行调整 <appraisals/modify-template>`。若需使用不同模"
+"板（例如部门专属评估模板），可创建新模板 :ref:`创建新模板 <appraisals/create-"
+"template>`。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:16
 msgid "Modify appraisal templates"
@@ -590,6 +618,8 @@ msgid ""
 "Click the template to view its details. Make any desired changes to the "
 "template."
 msgstr ""
+"默认模板以列表视图形式显示，名称为 :guilabel:`默认`。点击该模板可查看其详细信"
+"息。根据需要对模板进行修改。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:24
 msgid "The default template consists of the following questions:"
@@ -613,33 +643,34 @@ msgstr "**我的工作**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:35
 msgid "**What are my most important achievements since my last appraisal?**"
-msgstr ""
+msgstr "**自上次考评以来，我最重要的成就是什么？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:37
+#, fuzzy
 msgid ""
 "*Describe something you are proud of — work that had a positive impact on "
 "the company.*"
-msgstr ""
+msgstr "*描述令你引以为豪的事——那些对公司产生积极影响的工作。*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:39
 msgid ""
 "**What has been the most challenging aspect of my work this past year, and "
 "why?**"
-msgstr ""
+msgstr "**在过去一年中，我工作中最具挑战性的方面是什么？为什么？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:41
 msgid "*Did you face any new difficulties or unexpected obstacles?*"
-msgstr ""
+msgstr "*您是否遇到新的困难或意外障碍？*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:43
 msgid "**What do I need to improve my work?**"
-msgstr ""
+msgstr "**我需要做什么才能提升工作表现？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:45
 msgid ""
 "*How can the company support your needs and objectives to help you reach "
 "your goals and foster better collaboration?*"
-msgstr ""
+msgstr "*公司如何支持您的需求与目标，助您达成目标并促进更高效的协作？*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:48
 msgid "**My future**"
@@ -648,26 +679,26 @@ msgstr "**我的未来**"
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:50
 msgid ""
 "**What are my short-and-long-term goals with the company and for my career?**"
-msgstr ""
+msgstr "**我对公司及个人职业发展的短期与长期目标是什么？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:52
 msgid "*Provide a short-term objective (within the next 6 months).*"
-msgstr ""
+msgstr "*提供短期目标（未来6个月内）。*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:53
 msgid "*Provide a long-term objective (beyond 6 months).*"
-msgstr ""
+msgstr "*提供长期目标（超过6个月）。*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:55
 msgid ""
 "**Which parts of my job do I enjoy the most? Which do I enjoy the least?**"
-msgstr ""
+msgstr "**工作中最享受哪些部分？最不喜欢哪些部分？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:57
 msgid ""
 "*Every job has its strong points. In your opinion, which tasks do you enjoy "
 "the most and which the least?*"
-msgstr ""
+msgstr "*每份工作都有其优势。在您看来，最喜欢和最不喜欢哪些工作内容？*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:60
 msgid "**My feelings**"
@@ -679,7 +710,7 @@ msgstr "**我如何看待公司...**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:64
 msgid "Company culture and values: |5-stars|"
-msgstr ""
+msgstr "公司文化与价值观：|5-stars|"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:65
 msgid "Internal Communication: |5-stars|"
@@ -687,7 +718,7 @@ msgstr "内部沟通：|5星级|"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:67
 msgid "**How do I feel about my own role?**"
-msgstr ""
+msgstr "**我如何看待自身角色？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:69
 msgid "Job content: |5-stars|"
@@ -699,7 +730,7 @@ msgstr "工作组织：[5 星级]"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:71
 msgid "Compensation: |5-stars|"
-msgstr ""
+msgstr "报酬：|5-stars|"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:73
 msgid "**Feedback**"
@@ -714,7 +745,7 @@ msgstr "**举出一个让你相信该员工价值的积极成就。**"
 msgid ""
 "*Mention any achievements that demonstrate their strengths in handling work-"
 "related challenges.*"
-msgstr ""
+msgstr "*提及任何能体现其应对工作挑战能力的成就。*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:80
 msgid "**Evaluation**"
@@ -746,7 +777,7 @@ msgstr "*自主性*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:91
 msgid "*Proactivity*"
-msgstr ""
+msgstr "*主动性*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:94
 msgid "**Improvements**"
@@ -768,19 +799,21 @@ msgstr "**短期（6 个月）行动/决定/目标**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:102
 msgid "*Do you need a rapid response to address the current situation?*"
-msgstr ""
+msgstr "*您是否需要快速响应以应对当前状况？*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:104
 msgid ""
 "**Long term (> 6 months) career discussion: Where does the employee want to "
 "go, and how can you help them reach that goal?**"
 msgstr ""
+"**长期（>6个月）职业发展规划：员工期望的发展方向是什么？公司如何协助其达成目"
+"标？**"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:107
 msgid ""
 "*How do you see the employee in the future? Does your vision align with the "
 "employee's goals?*"
-msgstr ""
+msgstr "*您如何看待员工的未来发展？您的愿景是否与员工的目标相契合？*"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:113
 msgid "Create appraisal templates"
@@ -793,6 +826,8 @@ msgid ""
 "using department-specific templates can be helpful if specific feedback is "
 "needed."
 msgstr ""
+"拥有众多部门的大型企业可能更倾向于使用部门专属的评估模板，而非通用默认模板。"
+"当需要提供具体反馈时，创建并使用部门专属模板会更具实用性。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:120
 msgid ""
@@ -800,12 +835,16 @@ msgid ""
 "who handle administrative tasks and scheduling, and field repair technicians "
 "who perform repairs at customers' homes."
 msgstr ""
+"家电维修公司主要有两类员工：负责行政事务和日程安排的办公室职员，以及在客户家"
+"中进行维修的现场维修技师。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:124
 msgid ""
 "This type of company may create two different appraisal templates, one for "
 "the office workers and one for the on-site repair technicians."
 msgstr ""
+"此类公司可能创建两种不同的评估模板，一种适用于办公室职员，另一种适用于现场维"
+"修技术人员。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:127
 msgid ""
@@ -815,6 +854,9 @@ msgid ""
 "by :doc:`adding questions to the template using the rich-text editor <../../"
 "essentials/html_editor>`."
 msgstr ""
+"要创建新的考评模板，请前往 :menuselection:`考评应用程序 --> 配置 --> 考评模"
+"板`，然后点击左上角的`新建`按钮。接下来，通过 :doc:`使用富文本编辑器向模板添"
+"加问题 <../../essentials/html_editor>`来配置考评。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:132
 msgid ""
@@ -825,10 +867,14 @@ msgid ""
 "gear` :guilabel:`(Actions)` icon, then click :icon:`fa-"
 "clone` :guilabel:`Duplicate`."
 msgstr ""
+"此外，可通过复制默认模板并修改副本创建新的评估模板。复制模板时，请前往 "
+":menuselection:`考评应用程序 --> 配置 --> 考评模板`，然后点击需要复制的模板。"
+"点击 :icon:`fa-gear` :guilabel:`(操作)` 图标，再点击 :icon:`fa-clone` "
+":guilabel:`复制`。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:137
 msgid "First, rename the template, then make any desired changes."
-msgstr ""
+msgstr "首先，重命名模板，然后进行任何所需的修改。"
 
 #: ../../content/applications/hr/appraisals/appraisal_templates.rst:140
 msgid ""
@@ -872,6 +918,9 @@ msgid ""
 "a concrete target between reviews, and gives managers reliable insights when "
 "evaluating performance."
 msgstr ""
+"Odoo **考评**应用程序使管理者能够为员工设定并追踪明确的目标。持续朝着目标迈进"
+"，既为员工在两次评估之间提供了具体目标，也为管理者在评估绩效时提供了可靠的洞"
+"察依据。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:10
 msgid ""
@@ -1256,7 +1305,7 @@ msgstr "为学习 Python 创建的已完成目标。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:214
 msgid "Update employee goals"
-msgstr ""
+msgstr "更新员工目标"
 
 #: ../../content/applications/hr/appraisals/goals.rst:216
 msgid ""
@@ -1265,6 +1314,8 @@ msgid ""
 "progress outside of an appraisal. This could be from an employee completing "
 "a course or certification, documenting their goal progress or completion."
 msgstr ""
+"通常，目标会在员工评估期间直接在评估表上更新。但在某些情况下，需要在评估之外"
+"更新目标进度。这可能是员工完成课程或认证后，记录其目标进展或完成情况。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:220
 msgid ""
@@ -1273,6 +1324,8 @@ msgid ""
 "goals are being updated, and click on an individual goal to open the goal "
 "record."
 msgstr ""
+"要在考评之外更新目标的进度百分比，请前往 :menuselection:`考评应用程序 --> 目"
+"标`。展开需要更新目标的员工，点击具体目标以打开目标记录。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:224
 msgid ""
@@ -1287,7 +1340,7 @@ msgstr ""
 
 #: ../../content/applications/hr/appraisals/goals.rst:229
 msgid "Completed employee goals"
-msgstr ""
+msgstr "已完成员工目标"
 
 #: ../../content/applications/hr/appraisals/goals.rst:231
 msgid ""
@@ -1305,18 +1358,20 @@ msgid ""
 "green :guilabel:`Done` banner appears in the top-right corner of the goal "
 "card, and the :guilabel:`Progress` changes to :guilabel:`100%`."
 msgstr ""
-"点击左上角的 :guilabel:`标记为已完成` 按钮。目标卡的右上角会出现绿色"
-"的 :guilabel:`已完成` 条幅，同时 :guilabel:`进度` 变为 :guilabel:`100%。"
+"点击左上角的 :guilabel:`标记为已完成` 按钮。目标卡的右上角会出现绿色的 "
+":guilabel:`已完成` 条幅，同时 :guilabel:`进度` 变为 :guilabel:`100%`。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:240
 msgid ""
 "On the :guilabel:`Goals` dashboard, completed goals are indicated with a "
 "green :guilabel:`100%` tag in the :guilabel:`Progress` column."
 msgstr ""
+"在 :guilabel:`目标`仪表板上，已完成的目标会在 :guilabel:`进度`列中显示为绿色 "
+":guilabel:`100%`标签。"
 
 #: ../../content/applications/hr/appraisals/goals.rst:None
 msgid "A goal form marked as complete."
-msgstr ""
+msgstr "一个标记为完成的目标表单。"
 
 #: ../../content/applications/hr/appraisals/new_appraisals.rst:3
 msgid "Conduct appraisals"
@@ -33961,11 +34016,13 @@ msgid ""
 "amounts considered in the pay. These rules are configured by the "
 "localization and affect the computation of the salaries."
 msgstr ""
+"每个*结构*都有一套用于计算薪酬中各项金额的薪资*规则*。这些规则由本地化配置决"
+"定，并影响薪资的计算过程。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:182
 msgid ""
 "Modification or creation of rules should **only** be done when necessary."
-msgstr ""
+msgstr "规则的修改或创建应**仅**在必要时进行。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:184
 msgid ""
@@ -33973,10 +34030,12 @@ msgid ""
 "> Rules`. Click on a structure (such as :guilabel:`Regular Pay`) to view all "
 "the rules."
 msgstr ""
+"要查看所有规则，请前往 :menuselection:`薪酬管理应用 --> 配置 --> 规则`。点击"
+"某个结构（例如 :guilabel:`常规薪资`），即可查看所有规则。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:188
 msgid "Add a new rule"
-msgstr ""
+msgstr "添加新规则"
 
 #: ../../content/applications/hr/payroll/salaries.rst:190
 msgid ""
@@ -33984,18 +34043,22 @@ msgid ""
 "Rules` form loads. Enter the following information in the top half of the "
 "form:"
 msgstr ""
+"要创建新规则，请点击 :guilabel:`新建`，系统将加载空白 :guilabel:`薪资规则`表"
+"单。在表单上半部分输入以下信息："
 
 #: ../../content/applications/hr/payroll/salaries.rst:193
 msgid ""
 ":guilabel:`Rule Name`: Enter a name for the rule. This is the name displayed "
 "in the payslip."
-msgstr ""
+msgstr ":guilabel:`规则名称`：为规则输入名称。此名称将显示在工资单上。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:194
 msgid ""
 ":guilabel:`Code`: Enter a code to be used for the new rule. This is case "
 "sensitive and is used as the *rule ID*. This field is **required**."
 msgstr ""
+":guilabel:`代码`：输入用于新规则的代码。此字段区分大小写，将作为 *规则ID* 使"
+"用。此字段为**必填项**。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:196
 msgid ""
@@ -34003,6 +34066,8 @@ msgid ""
 "applies to, or enter a new category. The category is used to group rules and "
 "access their total sum."
 msgstr ""
+":guilabel:`类别`：使用下拉菜单选择规则适用的类别，或输入新类别。该类别用于分"
+"组规则并获取其总和。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:198
 msgid ""
@@ -34010,6 +34075,8 @@ msgid ""
 "structure the rule applies to, or enter a new one. This field is "
 "**required**."
 msgstr ""
+":guilabel:`薪资结构`：使用下拉菜单选择规则适用的薪资结构，或输入新结构。此字"
+"段为**必填项**。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:200
 msgid ""
@@ -34019,18 +34086,25 @@ msgid ""
 "number are calculated first, and their results can be used by rules with a "
 "higher sequence number. This field is **required**."
 msgstr ""
+":guilabel:`序列号`：输入一个数字，用于表示该规则在所有规则中的*计算顺序*。规"
+"则将根据其序列号依次处理。序列号较低的规则优先计算，其结果可供序列号较高的规"
+"则使用。此字段为**必填项**。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:204
 msgid ""
 ":guilabel:`Appears on Payslip`: Check the checkbox to have the rule visible "
 "on the employee payslip PDF."
 msgstr ""
+":guilabel:`显示在工资单上`：勾选此复选框，该规则将显示在员工工资单 PDF 文件中"
+"。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:206
 msgid ""
 ":guilabel:`Contributes to Employer Cost`: Check the checkbox to include the "
 "rule when computing the *employer cost* of a payslip."
 msgstr ""
+":guilabel:`计入雇主成本`：勾选此复选框，在计算工资单的*雇主成本*时包含该规则"
+"。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:210
 msgid "General tab"
@@ -34041,6 +34115,8 @@ msgid ""
 "Fill out the following sections of the :guilabel:`General` tab. These "
 "configurations determine *when* and *how* the rule is calculated."
 msgstr ""
+"请填写 :guilabel:`常规`选项卡中的以下部分。这些配置决定规则的*计算顺序*和*计"
+"算方式*。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:216
 msgid "Conditions"
@@ -34052,12 +34128,14 @@ msgid ""
 "is calculated and displayed as a line in the payslip form view. Choose from "
 "one of the following options:"
 msgstr ""
+":guilabel:`计算依据条件`：使用下拉菜单选择规则是否在工资单表格视图中计算并显"
+"示为一行。可选以下选项之一："
 
 #: ../../content/applications/hr/payroll/salaries.rst:221
 msgid ""
 ":guilabel:`Always True`: The rule is always calculated. No other "
 "configurations are needed for this section."
-msgstr ""
+msgstr ":guilabel:`始终为真`：该规则始终被计算。此部分无需其他配置。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:223
 msgid ""
@@ -34067,6 +34145,9 @@ msgid ""
 "added to the amount of the rule. If selected, the following additional "
 "fields appear and must be configured:"
 msgstr ""
+":guilabel:`薪资输入`：此项为结构引入动态福利。该字段将显示在*员工*表单的*薪酬"
+"管理*选项卡、工资单的*输入*选项卡中，或同时出现在两处。该字段的数值将加至规则"
+"金额中。若选中此项，则需配置以下附加字段："
 
 #: ../../content/applications/hr/payroll/salaries.rst:228
 msgid ""
@@ -34076,6 +34157,10 @@ msgid ""
 "payslip automatically defaults to the value from the employee record, but it "
 "can be overwritten directly on the payslip for a specific payroll run."
 msgstr ""
+":guilabel:`输入位置`：指定该字段应显示的位置及其所属对象，可选： "
+":guilabel:`员工`、 :guilabel:`工资单` 或两者兼有。若同时选择两者，工资单上的"
+"数值将自动默认采用员工记录中的值，但可在特定薪资周期内直接在工资单上覆盖该值"
+"。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:232
 msgid ""
@@ -34083,34 +34168,36 @@ msgid ""
 "on the form view. Only one option is available by "
 "default, :guilabel:`Inputs`."
 msgstr ""
+":guilabel:`分组模块`：此功能将多个输入项在表单视图中组合为一个可展开的分区。"
+"默认仅提供一个选项： :guilabel:`输入项`。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:234
 msgid ""
 ":guilabel:`Unit`: Click the corresponding radio button to determine how the "
 "benefit is displayed. The available options are:"
-msgstr ""
+msgstr ":guilabel:`单位`：点击对应的单选按钮以确定福利的显示方式。可选项包括："
 
 #: ../../content/applications/hr/payroll/salaries.rst:237
 msgid ":guilabel:`Monetary`: A number with currency."
-msgstr ""
+msgstr ":guilabel:`货币`：带货币单位的数字。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:238
 msgid ":guilabel:`Quantity`: A number."
-msgstr ""
+msgstr ":guilabel:`数量`：一个数字。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:239
 msgid ":guilabel:`Percentage`: A number with a % sign."
-msgstr ""
+msgstr ":guilabel:`百分比`：带%符号的数字。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:240
 msgid ":guilabel:`Checkbox`: Indicates boolean values."
-msgstr ""
+msgstr ":guilabel:`复选框`：用于表示布尔值（是 / 否）。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:242
 msgid ""
 ":guilabel:`Input Description`: Enter a short explanation of when the input "
 "is applicable."
-msgstr ""
+msgstr ":guilabel:`录入项说明`：输入该录入项适用场景的简短说明。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:243
 msgid ""
@@ -34119,6 +34206,9 @@ msgid ""
 "the :guilabel:`Unit`. If necessary, add a :guilabel:`Suffix` in the field to "
 "the right of this value, such as `per km`."
 msgstr ""
+":guilabel:`默认值`：输入默认值，可以是货币金额、数量或百分比。具体类型取决于"
+"所选的 :guilabel:`单位`。如有必要，可在该值右侧的字段中添加 :guilabel:`后"
+"缀`，例如 `每公里`。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:248
 msgid ""
@@ -34126,6 +34216,8 @@ msgid ""
 "changes to :guilabel:`Selected by Default`. Click the checkbox to have the "
 "rule active by default."
 msgstr ""
+"如果为 :guilabel:`单元` 选中 :guilabel:`复选框`，此字段将变为 :guilabel:`默认"
+"选中`。点击复选框可使规则默认处于激活状态。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:251
 msgid ""
@@ -34140,6 +34232,9 @@ msgid ""
 "appears. Using the drop-down menu, select the type of input the rule is "
 "based on, such as :guilabel:`Deduction`, :guilabel:`Reimbursement`, etc."
 msgstr ""
+":guilabel:`其他输入`：选择此项可检查是否存在类型相同的工资条行项。选中后将显"
+"示 :guilabel:`其他输入条件`字段。通过下拉菜单选择规则基于的输入类型，例如 "
+":guilabel:`扣除项`、 :guilabel:`报销项`等。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:258
 msgid ""
@@ -34148,29 +34243,31 @@ msgid ""
 "right side lists the :guilabel:`Available variables` and "
 "the :guilabel:`Output`:"
 msgstr ""
+":guilabel:`Python 表达式`：选择此项可使用 Python 脚本计算规则。脚本将通过本地"
+"字典进行评估。右侧列出了 :guilabel:`可用变量` 和 :guilabel:`输出`："
 
 #: ../../content/applications/hr/payroll/salaries.rst:262
 #: ../../content/applications/hr/payroll/salaries.rst:337
 msgid ":guilabel:`Available variables`:"
-msgstr ""
+msgstr ":guilabel:`可用变量`："
 
 #: ../../content/applications/hr/payroll/salaries.rst:264
 msgid ":guilabel:`payslip`: The `hr.payslip` object."
-msgstr ""
+msgstr ":guilabel:`工资单`：`hr.payslip` 对象。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:265
 msgid ":guilabel:`employee`: The `hr.employee` object."
-msgstr ""
+msgstr ":guilabel:`员工`：`hr.employee` 对象。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:266
 msgid ":guilabel:`version`: The `hr.version` object."
-msgstr ""
+msgstr ":guilabel:`版本`：`hr.version` 对象。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:267
 msgid ""
 ":guilabel:`result_rules`: A dictionary containing the rules amounts, "
 "quantities, rates and totals (previously computed)."
-msgstr ""
+msgstr ":guilabel:`result_rules`：包含规则金额、数量、费率和总计（先前计算）的字典。"
 
 #: ../../content/applications/hr/payroll/salaries.rst:269
 msgid ""
@@ -34178,21 +34275,23 @@ msgid ""
 "categories (the sum of the amount of all the rules belonging to that "
 "category):"
 msgstr ""
+":guilabel:`类别`：包含计算所得薪资规则类别的字典（该类别下所有规则金额之和）"
+"："
 
 #: ../../content/applications/hr/payroll/salaries.rst:272
 #: ../../content/applications/hr/payroll/salaries.rst:346
 msgid ":guilabel:`total`: rule total"
-msgstr ""
+msgstr ":guilabel:`总计`：规则总计"
 
 #: ../../content/applications/hr/payroll/salaries.rst:273
 #: ../../content/applications/hr/payroll/salaries.rst:347
 msgid ":guilabel:`amount`: rule amount"
-msgstr ""
+msgstr ":guilabel:`金额`：规则金额"
 
 #: ../../content/applications/hr/payroll/salaries.rst:274
 #: ../../content/applications/hr/payroll/salaries.rst:348
 msgid ":guilabel:`quantity`: rule quantity"
-msgstr ""
+msgstr ":guilabel:`数量`：规则数量"
 
 #: ../../content/applications/hr/payroll/salaries.rst:275
 #: ../../content/applications/hr/payroll/salaries.rst:349
@@ -43901,6 +44000,10 @@ msgid ""
 "employee>`, :ref:`which types are more commonly used <time_off/by_type>`, "
 "and :ref:`how much each employee still has available <time_off/balance>`."
 msgstr ""
+"**休假**应用的报表功能允许管理者按员工、类型或剩余额度查看团队休假情况。这使"
+"管理者能够了解 :ref:`哪些员工正在休假 <time_off/by-employee>`、 :ref:`已使用"
+"多少额度 <time_off/by-employee>`， :ref:`哪些类型使用更频繁 <time_off/"
+"by_type>`，以及 :ref:`每位员工剩余额度 <time_off/balance>`。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:10
 msgid ""
@@ -43909,6 +44012,9 @@ msgid ""
 "view, through the *Insert in Spreadsheet* button that appears in the top-"
 "left of a report."
 msgstr ""
+"任何报告均可添加至电子表格中。当处于 :icon:`fa-area-chart` :guilabel:`(图表)"
+"` 或 :icon:`oi-view-pivot` :guilabel:`(数据透视表)` 视图时，可通过报告左上角"
+"出现的 *插入到电子表格* 按钮实现此操作。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:15
 msgid ""
@@ -43929,6 +44035,9 @@ msgid ""
 "absences. To view a list of employee time off requests, navigate "
 "to :menuselection:`Time Off app --> Reporting --> by Employee`."
 msgstr ""
+"查看员工休假情况有助于管理者追踪休假模式、监控剩余额度、确保政策合规，并为即"
+"将发生的缺勤安排人员覆盖。要查看员工休假申请列表，请前往 :menuselection:`休假"
+"应用 --> 报告 --> 按员工查看`。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:27
 msgid ""
@@ -43983,6 +44092,8 @@ msgid ""
 "various options, refer to the :doc:`reporting <../../essentials/reporting>` "
 "documentation."
 msgstr ""
+"当选定某项时，该选项将显示额外操作选项。有关报告及其各项选项的详细信息，请参"
+"阅 :doc:`报告功能 <../../essentials/reporting>`说明文档。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:53
 msgid "By type"
@@ -43995,6 +44106,9 @@ msgid ""
 "and can spot any trends. High totals in certain time off types, like sick "
 "time off, can indicate health or morale concerns."
 msgstr ""
+"按休假类型查看全公司的休假情况，可帮助管理者判断员工是否在正常使用休假额度、"
+"哪些类型的休假使用频率更高，并识别相关趋势。某些休假类型（如病假）的总时长偏"
+"高，可能反映出健康或员工士气问题。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:59
 msgid ""
@@ -44002,6 +44116,8 @@ msgid ""
 "to :menuselection:`Time Off app --> Reporting --> by Type`. This shows all "
 "time off requests in a default bar chart."
 msgstr ""
+"若要查看按休假类型分类的休假图表，请进入：:menuselection:`休假应用 --> 报"
+"表 --> 按类型`。系统将以默认柱状图形式展示所有休假申请。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:62
 msgid ""
@@ -44056,6 +44172,8 @@ msgid ""
 "their various options, refer to the :doc:`reporting <../../essentials/"
 "reporting>` documentation."
 msgstr ""
+"做出选择后，系统会显示针对该选项的额外设置。如需了解报表及其各类选项的更详细"
+"说明，请参考 :doc:`报告 <../../essentials/reporting>`说明文档。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:86
 msgid "Balance"
@@ -44069,6 +44187,9 @@ msgid ""
 "expire soon, they can inform their employees and adjust scheduled "
 "accordingly to be prepared for their absences."
 msgstr ""
+"当某些休假类型存在限制条件时（例如结转规则和余额上限），查看休假余额可帮助管"
+"理者全面掌握休假情况。若发现特定员工即将到期的大量休假时长，管理者可及时通知"
+"员工并相应调整排班计划，为其缺勤做好准备。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:93
 msgid ""
@@ -44077,6 +44198,9 @@ msgid ""
 "and :guilabel:`Planned`, navigate to :menuselection:`Time Off app --> "
 "Reporting --> Balance`."
 msgstr ""
+"若要查看按休假类型分类，并进一步按 :guilabel:`剩余` 与 :guilabel:`已计划` 的"
+"天数、小时数统计的休假余额数据透视表，请进入：:menuselection:`休假应用 --> 报"
+"表 --> 余额`。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:97
 msgid ""
@@ -44084,10 +44208,12 @@ msgid ""
 "populate the rows, while the various time off types and balances populate "
 "the columns."
 msgstr ""
+"此默认数据透视表显示所有休假余额。员工信息填充在行中，而各类休假类型及余额则"
+"填充在列中。"
 
 #: ../../content/applications/hr/time_off/reporting.rst:None
 msgid "The various time off balances, in a pivot table."
-msgstr ""
+msgstr "各类休假余额，在数据透视表中。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:3
 msgid "Request time off"
@@ -44101,6 +44227,9 @@ msgid ""
 "officer (depending on who the employee's :ref:`time off approver is "
 "<employees/approvers>`)."
 msgstr ""
+"当员工想要休假时，需首先通过**休假**应用提交休假申请。申请提交后，将由员工的"
+"直属经理或休假专员审核（具体取决于员工的 :ref:`休假审批人 <employees/"
+"approvers>` 设置）。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:11
 msgid ""
@@ -44108,10 +44237,12 @@ msgid ""
 "approval <time_off/time-off-requests>`, the time off is automatically "
 "approved, and does not need to be reviewed."
 msgstr ""
+"若员工申请的休假类型 :ref:`无需审批 <time_off/time-off-requests>`，则休假将自"
+"动批准，无需审核。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:16
 msgid "Submit time off request"
-msgstr ""
+msgstr "提交休假申请"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:18
 msgid ""
@@ -44119,12 +44250,16 @@ msgid ""
 "of the **Time Off** app dashboard, and a :guilabel:`New Time Off` pop-up "
 "form loads."
 msgstr ""
+"如需申请休假，请在休假应用仪表板的左上角点击 :guilabel:`新建` 按钮，系统会弹"
+"出 :guilabel:`新建休假` 表单。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:21
 msgid ""
 "Fill out the :ref:`fields on the form <time_off/fields>`, and then "
 "click :guilabel:`Save & Close` to submit the request."
 msgstr ""
+"填写表单中的 :ref:`字段 <time_off/fields>`，然后点击 :guilabel:`保存并关闭`以"
+"提交请求。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:25
 msgid ""
@@ -44132,14 +44267,16 @@ msgid ""
 "dashboard, or by navigating to :menuselection:`Time Off --> My Time --> My "
 "Time Off`, and clicking :guilabel:`New`."
 msgstr ""
+"休假申请可通过主界面 **休假** 应用面板提交，或依次进入 :menuselection:`休"
+"假 --> 我的时间 --> 我的休假申请`，点击 :guilabel:`新建`按钮操作。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:None
 msgid "A time off request for three hours of vacation time off."
-msgstr ""
+msgstr "申请休假三小时。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:34
 msgid "Time off fields"
-msgstr ""
+msgstr "休假字段"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:36
 msgid ""
@@ -44150,7 +44287,7 @@ msgstr "在 :guilabel:`新的休假` 申请表中输入以下信息："
 msgid ""
 ":guilabel:`Time Off Type`: Using the drop-down menu, select the type of time "
 "off being requested."
-msgstr ""
+msgstr ":guilabel:`休假类型`: 使用下拉菜单选择所申请的休假类型。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:39
 msgid ""
@@ -44158,6 +44295,8 @@ msgid ""
 "two fields to populate: the start and end dates. Click on either date field "
 "and a popover calendar appears."
 msgstr ""
+":guilabel:`日期`：请输入休假所涵盖的日期范围。需填写两个字段：起始日期和结束"
+"日期。点击任一日期字段，弹出式日历将随即显示。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:42
 msgid ""
@@ -44202,6 +44341,9 @@ msgid ""
 "either :guilabel:`Morning` or :guilabel:`Afternoon` to indicate which half "
 "of the day is being requested off."
 msgstr ""
+":guilabel:`半天`：若休假申请为半天，请勾选此复选框。选中后，第二个日期字段将"
+"消失，并替换为下拉菜单。从该下拉菜单中选择 :guilabel:`上午` 或 :guilabel:`下"
+"午`，以表明申请请假的具体时段。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:59
 msgid ""
@@ -44210,6 +44352,9 @@ msgid ""
 "field appears beneath this option. Using the drop-down menu, select the "
 "start and end time for the time off request."
 msgstr ""
+":guilabel:`自定义时长`：若请假时长非整日或半日，请勾选此复选框。选中后，该选"
+"项下方将显示 :guilabel:`开始时间` 和 :guilabel:`结束时间` 字段。请通过下拉菜"
+"单选择请假请求的起止时间。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:63
 msgid ""
@@ -44219,6 +44364,10 @@ msgid ""
 "off requested. This field is in either hours or days, depending on how the "
 "selected :ref:`Time Off Type <time_off/time-off-types>` is configured."
 msgstr ""
+":guilabel:`申请天数/小时数`：此字段在完成 :guilabel:`日期`部分后自动更新。若"
+"修改 :guilabel:`日期`部分，本部分将自动更新以反映申请的总休假时长。该字段显示"
+"为小时或天数，具体取决于所选 :ref:`休假类型 <time_off/time-off-types>` 的配置"
+"方式。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:67
 msgid ""
@@ -44226,6 +44375,8 @@ msgid ""
 "should include any details that managers and approvers may need to approve "
 "the request."
 msgstr ""
+":guilabel:`描述`：输入休假申请的说明。此处应包含经理和审批人可能需要批准该申"
+"请的任何细节。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:69
 msgid ""
@@ -44234,6 +44385,9 @@ msgid ""
 "attachment of documents. Click the :icon:`fa-paperclip` :guilabel:`Attach "
 "File` button, and a file explorer window appears."
 msgstr ""
+":guilabel:`支持文件`：此字段仅当所选的 :ref:`休假类型 <time_off/time-off-"
+"types>` 允许附加文件时才会显示。点击 :icon:`fa-paperclip` :guilabel:`附加文"
+"件` 按钮，将弹出文件浏览器窗口。"
 
 #: ../../content/applications/hr/time_off/request_time_off.rst:73
 msgid ""
@@ -44247,7 +44401,7 @@ msgstr ""
 #: ../../content/applications/hr/time_off/request_time_off.rst:None
 msgid ""
 "A time off request form filled out for an employee home sick with the flu."
-msgstr ""
+msgstr "员工因患流感居家休养所填写的休假申请表。"
 
 #~ msgid ":guilabel:`Survey Name`: the name of the specific survey."
 #~ msgstr ":guilabel:`调查名称`：具体调查的名称。"

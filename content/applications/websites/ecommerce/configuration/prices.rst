@@ -27,7 +27,7 @@ Choosing the displayed price tax usually depends on a country's regulations or t
 section, and under :guilabel:`Display Product Prices` select between:
 
 - :guilabel:`Tax Excluded`: The price displayed on the website is tax-excluded, and the tax is
-  computed at the :ref:`order summary <ecommerce/checkout/review_order>` step.
+  computed at the :ref:`ecommerce/checkout/review_order` step.
 - :guilabel:`Tax Included`: The price displayed on the website is tax-included.
 
 .. note::
@@ -37,7 +37,7 @@ section, and under :guilabel:`Display Product Prices` select between:
 .. tip::
    - Switch the :ref:`Tax indication <ecommerce_design/product_page/customization>` toggle on in the
      website editor to explicitly indicate if the price is `Tax excluded` or `Tax included` on the
-     :doc:`product page <../../ecommerce/ecommerce_design/product_page>`.
+     :doc:`../../ecommerce/ecommerce_design/product_page`.
    - Enable specific :ref:`B2B fields <ecommerce/b2b_b2c/b2b-fields>` during checkout in the
      :ref:`delivery step <ecommerce/checkout/delivery>` using the :doc:`website editor
      </applications/websites/website/web_design>`.
